@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Dungeons & Dragons - Consultas</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <picture>
+          <source media="(max-width: 428px)" srcset="../assets/img/dnd-logo-xs.svg">
+          <img src="../assets/img/dnd_logo.svg" alt="logo de Dungeons & Dragons" />
+        </picture>
+      </a>
+      <button id="menu-hamb"><img src="../assets/img/menu_hanburger.svg" alt="menu hamburguesa"></button>
+    </div>
+    <nav class="menu">
+      <ul class="menuNav">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="../pages/academia-dnd.html">Academia de DnD</a>
+        </li>
+        <li data-type="menuSub">
+          <span>Herramientas</span>
+          <ul class="menu-vertical">
+            <li><a href="../pages/herramientas-jugador.html">Jugador</a></li>
+            <li><a href="../pages/herramientas-dungeon-master.html">Dungeon Master</a></li>
+            <li><a href="../pages/herramientas-reglas.html">Rol</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../pages/tienda.html">Tienda</a>
+        </li>
+        <li>
+          <a href="#">Consultas</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="consults">
+    <section class="banner">
+      <div class="container flex">
+        <h1>Consultas</h1>
+      </div>
+    </section>
+    <section id="consult-content" class="container flex">
+      <article class="info">
+        <p>
+          Estamos aquí para ayudarte con cualquier duda o para revisar tu ficha de personaje.<br>
+          Ya sea que necesites aclarar reglas o mejorar tu estrategia,
+        </p>
+        <span>¡estamos listos para ser parte de tu aventura!</span>
+      </article>
+      <form class="form">
+        <div class="flex">
+          <div class="form-control">
+            <label for="name" class="hidden"></label>
+            <input type="text" name="name" id="name" placeholder="Nombre">
+          </div>
+          <div class="form-control">
+            <label for="email" class="hidden"></label>
+            <input type="text" name="email" id="email" placeholder="correo">
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="consult" class="hidden"></label>
+          <textarea name="consult" id="consult" cols="30" rows="10" placeholder="Déjanos tu consulta"></textarea>
+        </div>
+        <p>Si te gustaría que revisemos tu ficha de personaje puedes mandar el link de tu personaje de <span>nivel20</span>, puedes obtener el link desde <span><a
+          href="https://nivel20.com/">aquí</a></span>, o adjuntar tu ficha de personaje.</p>
+        <div class="flex">
+          <div class="form-control file-control">
+            <label for="file" class="btn-primary flex">
+              <img src="../assets/img/upload_icon.svg" alt="icono de descargas">
+              <span>Seleccionar archivo</span>
+            </label>
+            <input type="file" name="file" id="file" placeholder="Sube tu archivo">
+          </div>
+          <div class="form-control">
+            <label for="url" class="hidden"></label>
+            <input type="text" name="url" id="url" placeholder="url">
+          </div>
+        </div>
+        <input class="btn-primary" type="submit" name="send" id="send" value="Enviar">
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="social-media">
+      <a href="#">
+        <img src="../assets/img/facebook_icon.svg" alt="icono de facebook" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/twitter_icon.svg" alt="icono de twitter" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/instagram_icon.svg" alt="icono de instagram" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/youtube_icon.svg" alt="icono de youtube" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/twitch_icon.svg" alt="icono de twitch" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/discord_icon.svg" alt="icono de discord" />
+      </a>
+    </section>
+  </footer>
+  <script src="../js/header.js"></script>
+</body>
+
+</html>

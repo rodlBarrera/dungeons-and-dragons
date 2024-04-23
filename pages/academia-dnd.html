@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Dungeons & Dragons - Academia de DnD</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <picture>
+          <source media="(max-width: 428px)" srcset="../assets/img/dnd-logo-xs.svg">
+          <img src="../assets/img/dnd_logo.svg" alt="logo de Dungeons & Dragons" />
+        </picture>
+      </a>
+      <button id="menu-hamb"><img src="../assets/img/menu_hanburger.svg" alt="menu hamburguesa"></button>
+    </div>
+    <nav class="menu">
+      <ul class="menuNav">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">Academia de DnD</a>
+        </li>
+        <li data-type="menuSub">
+          <span>Herramientas</span>
+          <ul class="menu-vertical">
+            <li><a href="../pages/herramientas-jugador.html">Jugador</a></li>
+            <li><a href="../pages/herramientas-dungeon-master.html">Dungeon Master</a></li>
+            <li><a href="../pages/herramientas-reglas.html">Rol</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../pages/tienda.html">Tienda</a>
+        </li>
+        <li>
+          <a href="../pages/consultas.html">Consultas</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="dnd-academy">
+    <section class="banner">
+      <div class="container flex">
+        <h1>Academia de DnD</h1>
+      </div>
+    </section>
+    <section class="options">
+      <section id="option-what-is-dnd" class="btn-option selected">
+        <img src="../assets/img/dnd-icon.svg" alt="icono de DnD">
+        <div class="option-label">
+          <span>¿Qué es DnD?</span>
+        </div>
+      </section>
+      <section id="option-how-play-dnd" class="btn-option">
+        <img src="../assets/img/d20-icon.svg" alt="icono de un dado de 20 lados">
+        <div class="option-label">
+          <span>¿Cómo jugar DnD?</s>
+        </div>
+      </section>
+      <section id="option-how-create-character" class="btn-option">
+        <img src="../assets/img/boligrafo.svg" alt="icono de un bolígrafo">
+        <div class="option-label">
+          <span>¿Cómo crear tu personaje?</span>
+        </div>
+      </section>
+      <section id="option-resource" class="btn-option">
+        <img src="../assets/img/descargas.svg" alt="icono de descarga">
+        <div class="option-label">
+          <span>Recursos</span>
+        </div>
+      </section>
+    </section>
+    <section id="section-what-is-dnd" class="academy-content">
+      <div class="container">
+        <h2>Te damos la bienvenida a D&D</h2>
+        <section class="content">
+          <article class="info">
+            <p>En Dungeons & Dragons, <span>los jugadores</span> forman un grupo de aventureros que exploran mundos de
+              fantasía mientras se embarcan en misiones épicas y aumentan su experiencia. </p>
+            <p><span>El Dungeon Master (a quien también se conoce como DM)</span> es tanto el árbitro como el narrador
+              del juego. En D&D no se gana ni se pierde, al menos no en el sentido convencional de estas palabras.</p>
+            <p>La base de D&D es que se trata de un juego basado en la narración. Los dados solo te ayudan a avanzar.
+              Todo depende de tus decisiones, desde tu aspecto o tus acciones a qué sucederá a continuación.</p>
+            <p>La creatividad colectiva de una partida de D&D da pie a historias que contarás una y otra vez, desde
+              sucesos legendarios a incidentes absurdos que te harán reír años después.</p>
+            <p>Diviértete y recuerda la regla de oro: ¡nunca dividas al grupo!</p>
+          </article>
+          <img src="../assets/img/Game-of-Dungeons-and-Dragons.png" alt="partida de DnD">
+        </section>
+      </div>
+    </section>
+    <section id="section-how-play-dnd" class="hidden academy-content">
+      <div class="container">
+        <h2>Para jugadores</h2>
+        <article class="info">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/788ySSg2mzc?si=U7IVmxiYPWCN9SEf"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p>En D&D, cada <span>jugador</span> crea un personaje heroico que lo representa en el juego. Puede ser una
+            habilidosa guerrera, un clérigo devoto, una pícara mortífera, un mago lanzador de conjuros ¡o incluso algo
+            totalmente distinto!</p>
+          <p>Juntos, el <span>Dungeon Master (o DM)</span> y los jugadores crean una historia emocionante en la que sus
+            valientes aventureros se enfrentan a peligros letales. Incluso si el grupo no consigue terminar la aventura
+            con éxito, los buenos ratos y los recuerdos consiguen que todo el mundo gane.</p>
+        </article>
+      </div>
+    </section>
+    <section id="section-how-create-character" class="hidden academy-content">
+      <div class="container">
+        <h2>Crea a tu personaje</h2>
+        <article class="info">
+          <p>Ya sé lo que te estás preguntando <span>¿Puedo ponerme en la piel de ese personaje de mi serie favorita en
+              Dragones y Mazmorras y usar sus poderes?</span> La respuesta es sí, al igual que prácticamente cualquier
+            personaje ficticio que alguna vez hayas imaginado. Pero si te tomas el tiempo suficiente para investigar,
+            puedes jugar hasta con Spider-Man. Como siempre, todo depende de tu imaginación. , vamos a ver cómo crear un
+            personaje desde cero y cuáles son los pasos a seguir para ello.</p>
+          <p>Existen distintos métodos para crear tu personaje en DnD:</p>
+          <p><span>Digital:</span> Puedes crear tu personaje de manera sencilla desde la pagina <a
+              href="https://nivel20.com/"><span>nivel20.com.</span></a> Si te interesa este modo puedes guiarte con este
+            video.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/haMhqpBfhlA?si=Ds0bFxRoe6oSQmY5"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p><span>Manual:</span> Utilizando una ficha de personaje, que podrás descargar desde aquí y utilizando el
+            manual del jugador que podrás adquirir desde nuestra tienda. Si te interesa este modo puedes guiarte con
+            este video.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8xeiEpAIWEk?si=7LXkJUA_JH_-Od4T"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+      </div>
+    </section>
+    <section id="section-resource" class="hidden academy-content">
+      <div class="container">
+        <h2>Recursos</h2>
+        <article class="info">
+          <p>¡Descarga ahora nuestra ficha de personaje personalizable y adéntrate en un mundo lleno de aventuras y
+            misterios! Completa los datos de tu héroe o heroína, elige sus habilidades y características únicas, y
+            prepárate para vivir emocionantes historias en cada partida. ¡Haz clic en el enlace de descarga y comienza
+            tu viaje hacia la leyenda!</p>
+          <a href="../assets/files/dnd_ficha_personaje.pdf" download="dnd_5e_ficha_personaje" target="_blank">
+            <button class="btn-primary btn-download">
+              <span>Ficha de personaje</span>
+              <img src="../assets/img/descargas.svg" alt="icono de descarga">
+            </button>
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class="initial-product">
+      <div class="container flex">
+        <article class="info">
+          <h2>Empieza tu aventura</h2>
+          <p>¿Quieres empezar a jugar de inmediato? ¡La Caja de Inicio de D&D: Los dragones de la Isla de las
+            Tempestades es tu punto de partida!</p>
+          <p>Esta caja contiene las reglas esenciales del juego, una aventura emocionante y fácil de dirigir para
+            Dungeon Masters principiantes y todo lo que necesitas para interpretar a personajes heroicos en peligrosas
+            aventuras por mundos de fantasía.</p>
+            <a href="#"><button class="btn-primary">Más información</button></a>
+        </article>
+        <article class="product">
+          <img src="../assets/img/initial_box_book.png" alt="libro de la caja de inicio">
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="social-media">
+      <a href="#">
+        <img src="../assets/img/facebook_icon.svg" alt="icono de facebook" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/twitter_icon.svg" alt="icono de twitter" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/instagram_icon.svg" alt="icono de instagram" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/youtube_icon.svg" alt="icono de youtube" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/twitch_icon.svg" alt="icono de twitch" />
+      </a>
+      <a href="#">
+        <img src="../assets/img/discord_icon.svg" alt="icono de discord" />
+      </a>
+    </section>
+  </footer>
+  <script src="../js/header.js"></script>
+  <script src="../js/dnd-academy.js"></script>
+</body>
+
+</html>

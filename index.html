@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Dungeons & Dragons</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#">
+                <picture>
+                    <source media="(max-width: 428px)" srcset="./assets/img/dnd-logo-xs.svg">
+                    <img src="./assets/img/dnd_logo.svg" alt="logo de Dungeons & Dragons" />
+                </picture>
+            </a>
+            <button id="menu-hamb"><img src="./assets/img/menu_hanburger.svg" alt="menu hamburguesa"></button>
+        </div>
+        <nav class="menu">
+            <ul class="menuNav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="./pages/academia-dnd.html">Academia de DnD</a>
+                </li>
+                <li data-type="menuSub">
+                    <span>Herramientas</span>
+                    <ul class="menu-vertical">
+                        <li><a href="./pages/herramientas-jugador.html">Jugador</a></li>
+                        <li><a href="./pages/herramientas-dungeon-master.html">Dungeon Master</a></li>
+                        <li><a href="./pages/herramientas-reglas.html">Rol</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./pages/tienda.html">Tienda</a>
+                </li>
+                <li>
+                    <a href="./pages/consultas.html">Consultas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <section class="banner">
+            <div class="container flex">
+                <h1 class="title">Dungeons & Dragons</h1>
+                <p class="content">
+                    ¡Explora un mundo de fantasía y aventuras!
+                    Crea tu personaje, enfréntate a desafíos épicos y forja historias
+                    emocionantes.
+                </p>
+                <a href="./pages/academia-dnd.html">
+                    <button class="btn-primary">Comienza aquí</button>
+                </a>
+            </div>
+        </section>
+        <section class="dnd-academy">
+            <div class="container flex">
+                <img src="./assets/img/comienzo_aventura.png" alt="aventureros de distintas clases luchando">
+                <div class="content">
+                    <h2>Academia de DnD</h2>
+                    <p>Sumérgete en el fascinante universo de Dungeons and Dragons y aprende cómo jugar este emocionante
+                        juego de
+                        rol. Descubre cómo crear tu propio personaje único y prepárate para vivir increíbles aventuras.
+                        ¡Empieza tu
+                        viaje hoy mismo!</p>
+                    <a href="./pages/academia-dnd.html"><button class="btn-primary">Comienza aquí</button></a>
+                </div>
+            </div>
+        </section>
+        <section class="tools">
+            <div class="container title">
+                <h2>Herramientas</h2>
+            </div>
+            <section class="tools-options">
+                <section id="tools-player" class="slide">
+                    <img src="./assets/img/player_icon.svg" alt="icono de dos espadas cruzadas">
+                    <!-- <div class="responsive-label">
+                        <img src="./assets/img/player_icon.svg" alt="icono de dos espadas cruzadas">
+                        <h2>Jugador</h2>
+                    </div> -->
+                    <section class="container info">
+                        <hgroup class="toolTitle">
+                            <img src="./assets/img/player_icon.svg" alt="icono de dos espadas cruzadas">
+                            <h2>Jugador</h2>
+                        </hgroup>
+                        <p>Explora las razas, clases, equipos y hechizos de DnD. ¡Todo lo que necesitas para
+                            personalizar tu
+                            personaje y prepararte para la batalla!</p>
+                        <a href="./pages/herramientas-jugador.html"><button class="btn-primary">ver más</button></a>
+                    </section>
+                </section>
+                <section id="tools-dungeon-master" class="slide">
+                    <img src="./assets/img/dm_icon.svg" alt="icono de una pantalla de dungeon master">
+                    <section class="container info">
+                        <hgroup class="toolTitle">
+                            <img src="./assets/img/dm_icon.svg" alt="icono de una pantalla de dungeon master">
+                            <h2>Dungeon Master</h2>
+                        </hgroup>
+                        <p>Sumérgete en el mundo del Dungeon Master y descubre el bestiario, las recompensas y los mapas
+                            que te
+                            ayudarán a crear emocionantes aventuras para tus jugadores. Domina el arte de la narración y
+                            conviértete
+                            en el maestro del juego.</p>
+                        <a href="./pages/herramientas-jugador.html"><button class="btn-primary">ver más</button></a>
+                    </section>
+                </section>
+                <section id="tools-rules" class="slide">
+                    <img src="./assets/img/rules_icons.svg" alt="icono de libro abierto">
+                    <section class="container info">
+                        <hgroup class="toolTitle">
+                            <img src="./assets/img/rules_icons.svg" alt="icono de libro abierto">
+                            <h2>Reglas</h2>
+                        </hgroup>
+                        <p>Explora las reglas fundamentales de Dungeons and Dragons, accede a libros y referencias
+                            rápidas que te
+                            ayudarán a mantener el equilibrio en tus partidas. Domina las reglas del juego y conviértete
+                            en un experto
+                            en DnD.</p>
+                        <a href="./pages/herramientas-jugador.html"><button class="btn-primary">ver más</button></a>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="store">
+            <div class="store-content container">
+                <div class="swiper storeSlider">
+                    <hgroup class="title">
+                        <h2>Productos recomendados</h2>
+                        <div class="slider-btns">
+                            <div class="btn-prev slide-btn">
+                                <img src="./assets/img/left-arrow.svg" alt="flecha a la izquierda">
+                            </div>
+                            <div class="btn-next slide-btn">
+                                <img src="./assets/img/right-arrow.svg" alt="flecha a la derecha">
+                            </div>
+                        </div>
+                    </hgroup>
+                    <section class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <img src="./assets/img/manual_del_jugador.png" alt="manual del jugador de DnD">
+                                <div class="card-content">
+                                    <p class="name">Manual del Jugador</p>
+                                    <a href="#"><img class="arrow-go" src="./assets/img/right-arrow.svg"
+                                            alt="flecha a la derecha"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <img src="./assets/img/guia_del_dungeon_master.png"
+                                    alt="guía del dungeon master de DnD">
+                                <div class="card-content">
+                                    <p class="name">Guía del Dungeon Master</p>
+                                    <a href="#"><img class="arrow-go" src="./assets/img/right-arrow.svg"
+                                            alt="flecha a la derecha"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <img src="./assets/img/manual_de_monstruos.png" alt="manual del monstruos de DnD">
+                                <div class="card-content">
+                                    <p class="name">Manual de monstruos</p>
+                                    <a href="#"><img class="arrow-go" src="./assets/img/right-arrow.svg"
+                                            alt="flecha a la derecha"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <img src="./assets/img/caja_de_inicio.png" alt="caja de inicio de DnD">
+                                <div class="card-content">
+                                    <p class="name">Caja de Inicio</p>
+                                    <a href="#"><img class="arrow-go" src="./assets/img/right-arrow.svg"
+                                            alt="flecha a la derecha"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <img src="./assets/img/kit_esencial.png" alt="kit esencial de DnD">
+                                <div class="card-content">
+                                    <p class="name">Kit Esencial</p>
+                                    <a href="#"><img class="arrow-go" src="./assets/img/right-arrow.svg"
+                                            alt="flecha a la derecha"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="card">
+                                <img src="./assets/img/set_de_regalo_de_los_reglamentos_básicos.png"
+                                    alt="set de regalo de los reglamentos básicos de DnD">
+                                <div class="card-content">
+                                    <p class="name">Set de regalo</p>
+                                    <a href="#"><img class="arrow-go" src="./assets/img/right-arrow.svg"
+                                            alt="flecha a la derecha"></a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <div class="store-btn">
+                        <a href="./pages/tienda.html"><button class="btn-primary">Ir a la tienda</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="queries">
+            <div class="container flex">
+                <article class="info">
+                    <h2>¿Tienes alguna consulta?</h2>
+                    <p>Nuestro equipo de expertos está aquí para ayudarte. Desde consejos de construcción de personajes
+                        hasta
+                        resolución de dudas específicas, estamos listos para guiarte en tu viaje de juego. ¡Contáctanos
+                        y despeja
+                        tus inquietudes para vivir la mejor experiencia en DnD!</p>
+                </article>
+                <form class="form">
+                    <div class="form-control">
+                        <label for="email" class="hidden"></label>
+                        <input type="email" name="email" id="email" placeholder="correo">
+                    </div>
+                    <div class="form-control">
+                        <label for="queries" class="hidden"></label>
+                        <textarea name="queries" id="queries" cols="30" rows="10"
+                            placeholder="Déjanos tu consulta"></textarea>
+                    </div>
+                    <input class="btn-primary" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="social-media">
+            <a href="#"><img src="./assets/img/facebook_icon.svg" alt="icono de facebook"></a>
+            <a href="#"><img src="./assets/img/twitter_icon.svg" alt="icono de twitter"></a>
+            <a href="#"><img src="./assets/img/instagram_icon.svg" alt="icono de instagram"></a>
+            <a href="#"><img src="./assets/img/youtube_icon.svg" alt="icono de youtube"></a>
+            <a href="#"><img src="./assets/img/twitch_icon.svg" alt="icono de twitch"></a>
+            <a href="#"><img src="./assets/img/discord_icon.svg" alt="icono de discord"></a>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
