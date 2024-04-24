@@ -59,36 +59,35 @@
         <span>¡estamos listos para ser parte de tu aventura!</span>
       </article>
       <form class="form">
-        <div class="flex">
-          <div class="form-control">
-            <label for="name" class="hidden"></label>
-            <input type="text" name="name" id="name" placeholder="Nombre">
-          </div>
-          <div class="form-control">
-            <label for="email" class="hidden"></label>
-            <input type="text" name="email" id="email" placeholder="correo">
-          </div>
+        <div class="form-control">
+          <label for="name" class="hidden"></label>
+          <input type="text" name="name" id="name" placeholder="Nombre">
         </div>
         <div class="form-control">
+          <label for="email" class="hidden"></label>
+          <input type="text" name="email" id="email" placeholder="correo">
+        </div>
+        <div class="form-control col-all">
           <label for="consult" class="hidden"></label>
           <textarea name="consult" id="consult" cols="30" rows="10" placeholder="Déjanos tu consulta"></textarea>
         </div>
-        <p>Si te gustaría que revisemos tu ficha de personaje puedes mandar el link de tu personaje de <span>nivel20</span>, puedes obtener el link desde <span><a
-          href="https://nivel20.com/">aquí</a></span>, o adjuntar tu ficha de personaje.</p>
-        <div class="flex">
-          <div class="form-control file-control">
-            <label for="file" class="btn-primary flex">
-              <img src="../assets/img/upload_icon.svg" alt="icono de descargas">
-              <span>Seleccionar archivo</span>
-            </label>
-            <input type="file" name="file" id="file" placeholder="Sube tu archivo">
-          </div>
-          <div class="form-control">
-            <label for="url" class="hidden"></label>
-            <input type="text" name="url" id="url" placeholder="url">
-          </div>
+        <p class="col-all">Si te gustaría que revisemos tu ficha de personaje puedes mandar el link de tu personaje de
+          <span>nivel20</span>, puedes obtener el link desde <span><a href="https://nivel20.com/">aquí</a></span>, o
+          adjuntar tu ficha de personaje.</p>
+        <div class="form-control file-control">
+          <label for="file" class="btn-primary flex">
+            <img src="../assets/img/upload_icon.svg" alt="icono de descargas">
+            <span>Seleccionar archivo</span>
+          </label>
+          <input type="file" name="file" id="file" placeholder="Sube tu archivo">
         </div>
-        <input class="btn-primary" type="submit" name="send" id="send" value="Enviar">
+        <div class="form-control">
+          <label for="url" class="hidden"></label>
+          <input type="text" name="url" id="url" placeholder="url">
+        </div>
+        <div class="btns-form col-all">
+          <input class="btn-primary" type="submit" name="send" id="send" value="Enviar">
+        </div>
       </form>
     </section>
   </main>

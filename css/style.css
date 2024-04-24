@@ -1424,6 +1424,11 @@ a, a:hover, a::selection {
     #consults .banner {
         background-size: cover;
     }
+
+    #consults .banner .flex {
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
 }
 
 
@@ -1433,7 +1438,7 @@ a, a:hover, a::selection {
     padding-bottom: 6em;
 }
 
-#consults .container.flex {
+#consults #consult-content.container.flex {
     display: flex;
     gap: 24px;
 }
@@ -1443,30 +1448,125 @@ a, a:hover, a::selection {
 }
 
 
+/* Media Query - Consultas - Contenido */
+@media screen and (768px >= width >= 320px) {
+    #consults #consult-content {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    #consults #consult-content.container.flex {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    #consults .info, #consults .form {
+        width: 100%;
+    }
+}
+
+
 /* Consultas - Info */
 #consults .info p {
-    font-size: var(--md-middle-title);
+    font-size: var(--md-sub-title);
     margin-bottom: 1.5rem;
 }
 
 #consults .info span{
-    font-size: 36px;
+    font-size: var(--md-middle-title);
+}
+
+
+/* Media Query - Consultas - Info */
+@media screen and (768px >= width) {
+    #consults .info p {
+        font-size: var(--sm-sub-title);
+        margin-bottom: 2rem;
+    }
+
+    #consults .info span{
+        font-size: var(--sm-middle-title);
+    }
+}
+
+@media screen and (428px >= width >= 320px) {
+    #consults .info p {
+        font-size: var(--xs-sub-title);
+        margin-bottom: 2rem;
+    }
+
+    #consults .info span{
+        font-size: var(--xs-middle-title);
+    }
 }
 
 
 /* Consultas - Formulario */
-#consults .form > .flex {
-    display: flex;
-    gap: 24px;
+#consults .form {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 12px));
+    column-gap: 24px;
 }
 
-#consults .form .flex .form-control {
-    width: 50%;
+#consults .form .col-all {
+    grid-column: 1 / -1;
 }
 
 #consults .form p {
     font-size: var(--md-small-text);
     margin-bottom: 1.5rem;
+}
+
+#consults .form .btns-form {
+    display: flex;
+    justify-content: flex;
+}
+
+
+/* Media Query - Consultas - Formularios */
+@media screen and (768px >= width) {
+    #consults .form .btns-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    #consults .form p {
+        font-size: var(--sm-small-text);
+        margin-bottom: 2rem;
+    }
+
+    #consults .form input[type='submit'] {
+        width: 20em;
+    }
+}
+
+@media screen and (428px >= width >= 320px) {
+    #consults .form {
+        grid-template-columns: 100%;
+    }
+
+    #consults .form .col-all {
+        grid-column: initial;
+    }
+
+    #consults .form p {
+        font-size: var(--sm-small-text);
+        margin-bottom: 1.5rem;
+    }
+
+    #consults .form .file-control {
+        margin-bottom: 1rem;
+    }
+
+    #consults .form .btns-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    #consults .form input[type='submit'] {
+        width: 100%;
+    }
 }
 
 
@@ -1522,7 +1622,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (375px >= width) {
+@media screen and (425px >= width) {
     .footer {
         padding: 1rem 3.25rem;
     }
