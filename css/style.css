@@ -728,6 +728,11 @@ a, a:hover, a::selection {
     height: 100%;
 }
 
+#home .store .store-content {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 #home .store .title {
     display: flex;
     justify-content: space-between;
