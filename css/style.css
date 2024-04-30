@@ -318,6 +318,7 @@ a, a:hover, a::selection {
 .header .menu .menuNav li a, .header .menu .menuNav li span{
     padding: 8px 36px;
     color: var(--color-white);
+    font-weight: var(--font-regular);
     display: block;
     width: 100%;
 }
@@ -325,6 +326,14 @@ a, a:hover, a::selection {
 .header .menu .menuNav li:hover {
     border-bottom: 2px solid var(--color-red-dark);
     cursor: pointer;
+}
+
+.header .menu .menuNav li[data-type="menuSub"]:hover {
+    border: none;
+}
+
+.header .menu .menuNav li:hover a, .header .menu .menuNav li:hover ~ li a{
+    padding-bottom: 6px;
 }
 
 .header .menu .menuNav li .menu-vertical {
@@ -341,10 +350,12 @@ a, a:hover, a::selection {
 
 .header .menu .menuNav li:hover .menu-vertical li a {
     border: 0;
+    padding: 1.5em 3em;
 }
 
 .header .menu .menuNav li:hover .menu-vertical li:hover {
-    border-bottom: 3px solid var(--color-red-dark);
+    background-color: var(--color-blue-gray-light);
+    border: none;
     width: 100%;
 }
 
