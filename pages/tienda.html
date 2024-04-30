@@ -95,22 +95,56 @@
                 <div class="title">
                     <h2>Productos</h2>
                 </div>
-                <section class="tooltip">
-                    <button data-value="all" class="btn-tooltip selected">
+                <section class="badget">
+                    <button data-value="all" class="btn-badget selected">
                         Todos
                     </button>
-                    <button data-value="initial-pack" class="btn-tooltip">
+                    <button data-value="initial-pack" class="btn-badget">
                         Paquete Inicial
                     </button>
-                    <button data-value="basic-books" class="btn-tooltip">
+                    <button data-value="basic-books" class="btn-badget">
                         Libros Básicos
                     </button>
-                    <button data-value="complements" class="btn-tooltip">
+                    <button data-value="complements" class="btn-badget">
                         Complementos
                     </button>
-                    <button class="btn-tooltip">
-                        <img src="../assets/img/sort_icon.svg" alt="icono de ordenado">
+                    <button data-sort="all" class="btn-badget sort">
+                        <img src="../assets/img/sort_icon_all.svg" alt="Icono para ordenar">
                     </button>
+                </section>
+                <section class="filter-sort">
+                    <section class="tabs">
+                        <button class="btn-tab btn-primary filter">
+                            <img src="../assets/img/filter_icon.svg" alt="icono de filtro">
+                        </button>
+                        <button data-sort="all" class="btn-tab btn-primary sort">
+                            <img src="../assets/img/sort_icon_all.svg" alt="Icono para ordenar">
+                        </button>
+                    </section>
+                    <nav class="menu-filter">
+                        <ul>
+                            <li>
+                                <button data-value="all" class="filter-item selected">
+                                    Todos
+                                </button>
+                            </li>
+                            <li>
+                                <button data-value="initial-pack" class="filter-item">
+                                    Paquete Inicial
+                                </button>
+                            </li>
+                            <li>
+                                <button data-value="basic-books" class="filter-item">
+                                    Libros Básicos
+                                </button>
+                            </li>
+                            <li>
+                                <button data-value="complements" class="filter-item">
+                                    Complementos
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
                 </section>
                 <section class="grid">
                     <article data-product-type="initial-pack" class="card">
