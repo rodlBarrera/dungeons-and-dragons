@@ -38,10 +38,10 @@
     box-sizing: border-box;
 }
 
-html {
-    font-family: "Poppins", sans-serif;
+body {
+    font-family: "Poppins", sans-serif !important;
     font-size: 16px;
-    background: radial-gradient(var(--bg-base-first) 50%, var(--bg-base-second));
+    background: radial-gradient(var(--bg-base-first) 50%, var(--bg-base-second)) !important;
 }
 
 main {
@@ -56,6 +56,7 @@ h1 {
 h2 {
     font-weight: var(--font-bold);
     font-size: var(--md-sub-title);
+    margin: 0;
 }
 
 span {
@@ -67,7 +68,7 @@ a, a:hover, a::selection {
     color: var(--color-black);
 }
 
-.container {
+.dnd-container {
     padding: 0 10vw;
     height: 100%;
 }
@@ -127,7 +128,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     h1 {
         font-size: var(--xs-title);
     }
@@ -304,6 +305,8 @@ a, a:hover, a::selection {
 .header .menu .menuNav {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .header .menu .menuNav li {
@@ -328,6 +331,8 @@ a, a:hover, a::selection {
     position: absolute;
     display: none;
     background-color: var(--color-blue-gray);
+    margin: 0;
+    padding: 0;
 }
 
 .header .menu .menuNav li:hover .menu-vertical {
@@ -344,7 +349,6 @@ a, a:hover, a::selection {
 }
 
 /* Media Query - Header */
-
 @media screen and (768px >= width >= 320px) {
     .header .logo {
         justify-content: space-between;
@@ -458,6 +462,13 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Home - Banner */
+@media screen and (1024px >= width) {
+    #home .banner .title,
+    #home .banner .content {
+        width: 80%;
+    }
+}
+
 @media screen and (768px >= width) {
     #home .banner {
         text-align: center;
@@ -477,7 +488,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #home .banner {
         text-align: center;
         height: auto;
@@ -543,7 +554,7 @@ a, a:hover, a::selection {
     
 }
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #home .dnd-academy {
         padding: 3em 0;
     }
@@ -805,7 +816,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Home - Tienda */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #home .store .title .slider-btns {
         display: none
     }
@@ -858,7 +869,7 @@ a, a:hover, a::selection {
 }
 
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #home .queries .flex {
         flex-direction: column;
     }
@@ -910,7 +921,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Academia de DnD - Banner */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #dnd-academy .banner {
         background-size: cover;
     }
@@ -957,7 +968,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Academia de DnD - Selectores */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #dnd-academy .options {
         flex-wrap: wrap;
         padding-left: 16px;
@@ -1000,7 +1011,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Academia de DnD - Como jugar DnD */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #dnd-academy #section-how-play-dnd .info iframe {
         width: 100%;
     }
@@ -1016,7 +1027,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Academia de DnD - Como crear tu personaje */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #dnd-academy #section-how-create-character .info iframe {
         width: 100%;
     }
@@ -1048,7 +1059,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Academia de DnD - Recursos */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #dnd-academy #section-resource .btn-download {
         display: flex;
         align-items: center;
@@ -1110,7 +1121,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (664px >= width >= 320px) {
     #dnd-academy .initial-product {
         width: 100%;
         height: auto;
@@ -1167,14 +1178,11 @@ a, a:hover, a::selection {
     margin: 48px 0;
 }
 
-#tools .tools-list .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    height: 100%;
+#tools .tools-list .tools-grid + .tools-grid {
+    margin-top: 24px;
 }
 
-#tools .tools-list .tools-grid.row-2 {
+/* #tools .tools-list .tools-grid.row-2 {
     grid-template-rows: repeat(2, 1fr);
 }
 
@@ -1184,7 +1192,7 @@ a, a:hover, a::selection {
 
 #tools .tools-list .tools-grid .tool.lg {
     grid-column: span 2;
-}
+} */
 
 #tools .tools-list .tools-grid .tool {
     display: flex;
@@ -1201,12 +1209,19 @@ a, a:hover, a::selection {
 
 
 /* Media Query Herramientas */
-@media screen and (428px >= width >= 320px) {
+
+@media screen and (576px > width) {
+    #tools .tools-list .tools-grid .col-12 + .col-12 {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (576px >= width >= 320px) {
     #tools .banner {
         background-size: cover;
     }
 
-    #tools .tools-list .tools-grid {
+    /* #tools .tools-list .tools-grid {
         grid-template-columns: 1fr;
     }
     
@@ -1220,7 +1235,7 @@ a, a:hover, a::selection {
 
     #tools .tools-list .tools-grid .tool.lg {
         grid-column: initial;
-    }
+    } */
 }
 
 
@@ -1356,7 +1371,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Store - Banner */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #store .banner {
         background-size: cover;
     }
@@ -1369,7 +1384,7 @@ a, a:hover, a::selection {
     height: 160px;
 }
 
-#store #search .container.flex{
+#store #search .dnd-container.flex{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1442,6 +1457,7 @@ a, a:hover, a::selection {
     align-items: center;
     gap: 8px;
     margin-bottom: 2em;
+    flex-wrap: wrap;
 }
 
 #store .filter-sort {
@@ -1456,7 +1472,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #store .badget {
         display: none;
     }
@@ -1569,7 +1585,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Consultas - Banner */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #consults .banner {
         background-size: cover;
     }
@@ -1587,7 +1603,7 @@ a, a:hover, a::selection {
     padding-bottom: 6em;
 }
 
-#consults #consult-content.container.flex {
+#consults #consult-content.dnd-container.flex {
     display: flex;
     gap: 24px;
 }
@@ -1604,7 +1620,7 @@ a, a:hover, a::selection {
         padding-bottom: 3em;
     }
 
-    #consults #consult-content.container.flex {
+    #consults #consult-content.dnd-container.flex {
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -1639,7 +1655,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #consults .info p {
         font-size: var(--xs-sub-title);
         margin-bottom: 2rem;
@@ -1690,7 +1706,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     #consults .form {
         grid-template-columns: 100%;
     }
@@ -1751,7 +1767,7 @@ a, a:hover, a::selection {
 
 
 /* Media Query - Footer */
-@media screen and (428px >= width >= 320px) {
+@media screen and (576px >= width >= 320px) {
     .footer {
         height: auto;
     }
