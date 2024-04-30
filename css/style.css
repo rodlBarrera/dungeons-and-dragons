@@ -408,8 +408,7 @@ a, a:hover, a::selection {
     }
 
     .header .menu.open .menuNav li a, .header .menu.open .menuNav li span {
-        padding: 1.5em;
-        padding-bottom: 1.5em;
+        padding: 1.5em !important;
     }
 
     .header .menu.open .menuNav li:hover {
