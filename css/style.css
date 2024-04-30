@@ -201,6 +201,12 @@ a, a:hover, a::selection {
 }
 
 .form .form-control input,
+.form .form-control select,
+.form .form-control textarea {
+    font-family: "Poppins", sans-serif;
+}
+
+.form .form-control input,
 .form .form-control select {
     min-height: 48px;
 }
@@ -728,6 +734,7 @@ a, a:hover, a::selection {
     }
 
     #home .tools .slide.hiddenToggle .info,
+    #home .tools .slide.hiddenToggle .toggle-arrow,
     #home .tools .slide .info .toolTitle ~ p,
     #home .tools .slide .info .toolTitle ~ a {
         display: none;
