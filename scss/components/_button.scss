@@ -1,0 +1,33 @@
+.btn-primary {
+    font-family: "Poppins", sans-serif;
+    background: map-get($color, 'red');
+    padding: 1rem 1.5rem;
+    color: map-get($color, 'white');
+    font-weight: map-get($font-weight, 'regular');
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+        background: map-get($color, 'red-dark');
+    }
+}
+
+.btn-badget {
+    background-color: map-get($color, 'red');
+    color: map-get($color, 'white');
+    padding: .5em 2em;
+    font-weight: map-get($font-weight, 'semibold');
+    border: 0;
+    border-radius: 8px;
+    height: 32px;
+    cursor: pointer;
+    &:hover {
+        background-color: map-get($color, 'red-dark');
+    }
+    &.selected {
+        @extend .btn-badget:hover
+    }
+    img {
+        height: 100%;
+    }
+}
