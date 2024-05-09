@@ -1,0 +1,45 @@
+$bg-base-first: #E1DED3;
+$bg-base-second: #DDD0AF;
+
+$color: (
+    'red': #9E0B0F,
+    'red-dark': #780A0D,
+    'blue-gray': #232226,
+    'blue-gray-light': #333333,
+    'input': #CFD3D4,
+    'label': #ABAFB1,
+    'white': #FFFFFF,
+    'black': #000000
+);
+
+$form: (
+    'regular': 400,
+    'semibold': 600,
+    'bold': 700,
+    'extrabold': 800
+);
+
+
+$title-size: (
+    'md': 48px,
+    'sm': 36px,
+    'xs': 32px
+);
+
+$middle-title-size: (
+    'md': 36px,
+    'sm': 28px,
+    'xs': 24px
+);
+
+$sub-title-size: (
+    'md': 24px,
+    'sm': 20px,
+    'xs': 16px
+);
+
+$small-text-size: (
+    'md': 12px,
+    'sm': 8px,
+    'xs': 8px
+);
