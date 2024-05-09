@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px;
+  background: radial-gradient(var(#E1DED3) 50%, var(#DDD0AF)) !important; }
+
+main {
+  min-height: calc(100vh - 210px); }
+
+h1 {
+  font-weight: 800;
+  font-size: 48px; }
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0; }
+
+span {
+  font-weight: 600; }
+
+a, a:hover, a::selection {
+  text-decoration: none;
+  color: #000000; }
+
+.dnd-container {
+  padding: 0 10vw;
+  height: 100%; }
+
+.hidden {
+  display: none !important; }
