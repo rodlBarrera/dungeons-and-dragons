@@ -1,5 +1,5 @@
 .btn-primary {
-    font-family: "Poppins", sans-serif;
+    font-family: $font-family;
     background: map-get($color, 'red');
     padding: 1rem 1.5rem;
     color: map-get($color, 'white');
