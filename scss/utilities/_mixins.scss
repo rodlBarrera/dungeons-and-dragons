@@ -1,3 +1,4 @@
+// Mixin Flex-box
 @mixin flex(
         $flex-direction: row, 
         $justify-content: flex-start, 
@@ -10,4 +11,16 @@
     align-items: $align-items;
     flex-wrap: $flex-wrap;
     gap: $gap;
-}
+};
+
+
+// Mixin Banner
+@mixin banner ($url, $size, $positionX, $positionY, $height: auto) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-position-x: $positionX;
+    background-position-y: $positionY;
+    height: $height;
+    color: map-get($color, 'white');
+};
