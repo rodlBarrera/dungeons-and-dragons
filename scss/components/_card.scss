@@ -4,9 +4,9 @@
     width: 100%;
     @include flex(column, center, center);
     border-radius: 16px;
-    color: var(--color-blue-gray);
-    font-weight: var(--font-semibold);
-    background: var(--color-white);
+    color: map-get($color, 'blue-gray');
+    font-weight: map-get($font-weight, 'semibold');
+    background: map-get($color, 'white');
     text-align: center;
     img {
         display: block;
