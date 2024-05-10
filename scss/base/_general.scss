@@ -2,6 +2,10 @@ main {
     min-height: calc(100vh - 210px);
 }
 
+p {
+    line-height: 1.5rem;
+}
+
 h1 {
     font-weight: map-get($font-weight, 'extrabold');
     font-size: map-get($title-size, 'md');
