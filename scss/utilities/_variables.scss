@@ -1,7 +1,12 @@
+// Variables
+// Colores base de fondo
 $bg-base-first: #E1DED3;
 $bg-base-second: #DDD0AF;
+
+// Tipo de fuente
 $font-family: "Poppins", sans-serif;
 
+// Colores
 $color: (
     'red': #9E0B0F,
     'red-dark': #780A0D,
@@ -13,6 +18,7 @@ $color: (
     'black': #000000
 );
 
+// Grosor de la fuente
 $font-weight: (
     'regular': 400,
     'semibold': 600,
@@ -20,25 +26,28 @@ $font-weight: (
     'extrabold': 800
 );
 
-
+// Tamaños de título
 $title-size: (
     'md': 48px,
     'sm': 36px,
     'xs': 32px
 );
 
+// Tamaños de títulos medianos
 $middle-title-size: (
     'md': 36px,
     'sm': 28px,
     'xs': 24px
 );
 
+// Tamaños de subtítulos
 $sub-title-size: (
     'md': 24px,
     'sm': 20px,
     'xs': 16px
 );
 
+// Tamaños de texto pequeño
 $small-text-size: (
     'md': 12px,
     'sm': 8px,
