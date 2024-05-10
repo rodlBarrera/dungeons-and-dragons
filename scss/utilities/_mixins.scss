@@ -14,8 +14,25 @@
 };
 
 
+// Mixin Grid
+@mixin grid(
+    $repeat,
+    $width-columns,
+    $gap: 0px,
+    $row-gap: $gap,
+    $column-gap: $gap,
+) {
+    display: grid;
+    grid-template-columns: repeat($repeat, $width-columns);
+    grid-auto-columns: max-content;
+    gap: $gap;
+    row-gap: $row-gap;
+    column-gap: $column-gap;
+}
+
+
 // Mixin Banner
-@mixin banner ($url, $size, $positionX, $positionY, $height: auto) {
+@mixin banner($url, $size, $positionX, $positionY, $height: auto) {
     background-image: url($url);
     background-repeat: no-repeat;
     background-size: $size;
@@ -25,7 +42,8 @@
     color: map-get($color, 'white');
 };
 
-@mixin banner_small ($url, $size, $positionY, $height: auto) {
+
+@mixin banner_small($url, $size, $positionY, $height: auto) {
     @include banner($url, $size, top, $positionY, $height);
     width: 100%;
     .flex {
@@ -36,7 +54,8 @@
     }
 }
 
+
 // Mixin Tools
 @mixin toolCard($url) {
-    @include banner($url, cover, top, 40%)
+    @include banner($url, cover, top, 40%);
 }

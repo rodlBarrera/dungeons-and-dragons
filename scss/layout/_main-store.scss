@@ -1,0 +1,59 @@
+// Tienda
+#store {
+    .banner {
+        @include banner_small('../assets/img/tienda.png', cover, 60%, 200px);
+    }
+    #search {
+        height: 160px;
+        background-color: map-get($color, 'blue-gray');
+        .flex {
+            @include flex(center, center);
+        }
+        .form {
+            width: 50%;
+            .form-control {
+                @include flex(center, center);
+                input {
+                    border-top-right-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+                .btn-search {
+                    height: 100%;
+                    height: 48px;
+                    padding: 8px 12px;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .grid {
+        @include grid(
+            auto-fill,
+            unquote("minmax(min(100%, 250px), 1fr)"),
+            24px,
+            36px
+        )
+    }
+    .title {
+        margin-bottom: 1.5rem;
+    }
+
+    #initial-pack {
+        padding: 2.25rem 0;
+    }
+    #products {
+        @extend #initial-pack;
+    }
+    .badget {
+        @include flex($align-items: center, $flex-wrap: wrap, $gap: 8px);
+        margin-bottom: 2em;
+    }
+    .filter-sort {
+        display: none;
+    }
+}
