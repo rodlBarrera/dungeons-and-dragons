@@ -1,0 +1,78 @@
+// Herramientas
+#tools {
+    .banner {
+        width: 100%;
+        h1 {
+            margin-bottom: 1rem;
+        }
+        .flex {
+            @include flex($align-items: flex-end);
+        }
+        &#player-tool {
+            @include banner('../assets/img/herramientas_jugador.png', cover, left, 45%, 200px);
+        }
+        &#dungeon-master-tool {
+            @include banner('../assets/img/herramientas_dungeon_master.png', cover, left, 35%, 200px);
+        }
+        &#rules-tool {
+            @include banner('../assets/img/herramientas_reglas.png', cover, left, 40%, 200px);
+        }
+    }
+    .tools-list {
+        margin: 48px 0;
+        .tools-grid {
+            + .tools-grid {
+                margin-top: 24px;  
+            }
+            .tool {
+                height: 250px;
+                @include flex($align-items: flex-end);
+                .title {
+                    color: map-get($color, 'white');
+                    background-color: rgba(0, 0, 0, .5);
+                    padding: 1em;
+                    width: 100%;
+                }
+            }
+            #tool-race {
+                @include toolCard('../assets/img/jugador-razas.png');
+            }
+            #tool-equipment {
+                @include toolCard('../assets/img/jugador-equipos.png');
+            }
+            #tool-spell {
+                @include toolCard('../assets/img/jugador-hechizos.png');
+            }
+            #tool-class {
+                @include toolCard('../assets/img/jugador-clases.png');
+            }
+            #tool-background {
+                @include toolCard('../assets/img/jugador-trasfondo.png');
+            }
+            #tool-treasure-generator {
+                @include toolCard('../assets/img/dungeon-master-generador-tesoro.png');
+            }
+            #tool-bestiary {
+                @include toolCard('../assets/img/dungeon-master-bestiario.png');
+            }
+            #tool-screen {
+                @include toolCard('../assets/img/dungeon-master-screen.png');
+            }
+            #tool-calculator-nd {
+                @include toolCard('../assets/img/dungeon-master-calculadora-nd.png');
+            }
+            #tool-adventures {
+                @include toolCard('../assets/img/reglas-aventuras.png');
+            }
+            #tool-books {
+                @include toolCard('../assets/img/reglas-libros.png');
+            }
+            #tool-conditions {
+                @include toolCard('../assets/img/reglas-condiciones.png');
+            }
+            #tool-quick-references {
+                @include toolCard('../assets/img/reglas-referencias-rapidas.png');
+            }
+        }
+    }
+}
