@@ -1,4 +1,4 @@
-/* Home */
+// Home
 #home {
     .banner {
         @include banner('../assets/img/home_banner.png', cover, center, center, 500px);

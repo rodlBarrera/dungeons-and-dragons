@@ -25,10 +25,18 @@
     color: map-get($color, 'white');
 };
 
+@mixin banner_small ($url, $size, $positionY, $height: auto) {
+    @include banner($url, $size, top, $positionY, $height);
+    width: 100%;
+    .flex {
+        @include flex($align-items: flex-end);
+        h1 {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 // Mixin Tools
 @mixin toolCard($url) {
-    background-image: url($url);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 40%;
+    @include banner($url, cover, top, 40%)
 }

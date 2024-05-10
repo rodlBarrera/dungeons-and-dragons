@@ -1,3 +1,4 @@
+// Academia DnD
 #dnd-academy {
     h2 {
         margin-bottom: 36px;
@@ -12,14 +13,7 @@
         margin-bottom: 16px;
     }
     .banner {
-        width: 100%;
-        @include banner('../assets/img/academia-dnd.png', cover, top, 40%, 200px);
-        h1 {
-            margin-bottom: 1rem;
-        }
-        .flex {
-            @include flex($align-items: flex-end);
-        }
+        @include banner_small('../assets/img/academia-dnd.png', cover, 40%, 200px);
     }
     .options {
         @include flex(center, center, $gap: 24px, $flex-wrap: wrap);

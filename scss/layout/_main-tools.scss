@@ -1,21 +1,14 @@
 // Herramientas
 #tools {
     .banner {
-        width: 100%;
-        h1 {
-            margin-bottom: 1rem;
-        }
-        .flex {
-            @include flex($align-items: flex-end);
-        }
         &#player-tool {
-            @include banner('../assets/img/herramientas_jugador.png', cover, left, 45%, 200px);
+            @include banner_small('../assets/img/herramientas_jugador.png', cover, 45%, 200px);
         }
         &#dungeon-master-tool {
-            @include banner('../assets/img/herramientas_dungeon_master.png', cover, left, 35%, 200px);
+            @include banner_small('../assets/img/herramientas_dungeon_master.png', cover, 35%, 200px);
         }
         &#rules-tool {
-            @include banner('../assets/img/herramientas_reglas.png', cover, left, 40%, 200px);
+            @include banner_small('../assets/img/herramientas_reglas.png', cover, 40%, 200px);
         }
     }
     .tools-list {
