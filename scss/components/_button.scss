@@ -1,4 +1,4 @@
-// Estilo de botón principal
+// Botón principal
 .btn-primary {
     font-family: $font-family;
     background: map-get($color, 'red');
@@ -13,7 +13,7 @@
     }
 }
 
-// Estilo de botón budget
+// Botón budget
 .btn-badget {
     background-color: map-get($color, 'red');
     color: map-get($color, 'white');

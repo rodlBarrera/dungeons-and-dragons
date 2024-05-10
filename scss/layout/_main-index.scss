@@ -3,7 +3,7 @@
     .banner {
         @include banner('../assets/img/home_banner.png', cover, center, center, 500px);
         .flex {
-            @include flex(column, center, $gap: 40px);
+            @include flex(center, $gap: 40px, $flex-direction: column);
         }
         .title {
             width: 45%;
@@ -86,7 +86,7 @@
             &.opened {
                 width: 100vw;
                 .info {
-                    @include flex(column, center, $gap: 24px);
+                    @include flex(center, $flex-direction: column, $gap: 24px);
                     color: map-get($color, 'white');
                     width: 100%;
                 }

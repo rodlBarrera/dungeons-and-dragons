@@ -1,7 +1,7 @@
-// Estilo de formulario
+// Formulario
 .form {
     .form-control {
-        @include flex(column);
+        @include flex($flex-direction: column);
         padding-bottom: 1rem;
         label {
             margin-bottom: .5rem;
