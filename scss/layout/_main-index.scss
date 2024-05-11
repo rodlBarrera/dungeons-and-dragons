@@ -69,7 +69,7 @@
             .info{
                 display: none;
                 .toolTitle {
-                    @include flex($justify-content: center, $align-items: center, $gap: 24px);
+                    @include flex($justify-content: space-between, $align-items: center, $gap: 24px);
                     .toolTitle-content {
                         @include flex($align-items: center, $gap: 24px);
                         img {
@@ -137,7 +137,7 @@
         
     }
 
-    .queries {
+    .consults {
         @include banner('../assets/img/consultas.png', cover, center, center, 34.375rem);
         .flex {
             @include flex($justify-content: center, $align-items: center, $gap: 24px);
