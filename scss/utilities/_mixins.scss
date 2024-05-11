@@ -1,44 +1,67 @@
 // Mixin Flex-box
 @mixin flex(
-        $justify-content: flex-start, 
-        $align-items: flex-start,
-        $gap: 0px,
-        $flex-direction: row,
-        $flex-wrap: nowrap) {
+        $justify-content: null, 
+        $align-items: null,
+        $gap : null,
+        $flex-direction: null,
+        $flex-wrap: null) {
     display: flex;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    gap: $gap;
-    flex-direction: $flex-direction;
-    flex-wrap: $flex-wrap;
+    @if $justify-content != null {
+        justify-content: $justify-content;
+    }
+    @if $align-items != null {
+        align-items: $align-items;
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+    @if $flex-direction != null {
+        flex-direction: $flex-direction;
+    }
+    @if $flex-wrap != null {
+        flex-wrap: $flex-wrap;
+    }
 };
 
 
 // Mixin Grid
 @mixin grid(
-    $repeat,
-    $width-columns,
-    $gap: 0px,
-    $row-gap: $gap,
-    $column-gap: $gap,
+    $repeat: null,
+    $width-columns: null,
+    $gap: null,
+    $row-gap: null,
+    $column-gap: null,
 ) {
     display: grid;
-    grid-template-columns: repeat($repeat, $width-columns);
+    @if $repeat != null && $width-columns != null {
+        grid-template-columns: repeat($repeat, $width-columns);
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+    @if $row-gap != null {
+        row-gap: $row-gap;
+    }
+    @if $column-gap != null {
+        column-gap: $column-gap;
+    }
     grid-auto-columns: max-content;
-    gap: $gap;
-    row-gap: $row-gap;
-    column-gap: $column-gap;
 }
 
 
 // Mixin Banner
-@mixin banner($url, $size, $positionX, $positionY, $height: auto) {
+@mixin banner($url, $size, $positionX, $positionY, $height: null) {
     background-image: url($url);
     background-repeat: no-repeat;
     background-size: $size;
     background-position-x: $positionX;
     background-position-y: $positionY;
-    height: $height;
+    @if height != null {
+        height: $height;
+    }
     color: map-get($color, 'white');
 };
 
