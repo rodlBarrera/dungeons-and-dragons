@@ -1,0 +1,32 @@
+// Media Query: 664px
+@media screen and (max-width: 664px) {
+    // Academia DnD
+    #dnd-academy {
+        .initial-product {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            .flex {
+                flex-direction: column-reverse;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            .info, .product {
+                width: 100%;
+            }
+            .info {
+                p {
+                    margin-bottom: 0px;
+                }
+                button {
+                    margin-top: 1.5rem;
+                }
+            }
+            .product {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
