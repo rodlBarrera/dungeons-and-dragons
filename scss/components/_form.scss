@@ -7,6 +7,14 @@
             margin-bottom: .5rem;
             font-size: 1rem;
         }
+        .btn-primary {
+            &.flex {
+                @include flex($gap: 8px);
+                span {
+                    font-weight: map-get($font-weight, 'regular');
+                }
+            }
+        }
         input {
             font-family: $font-family;
             min-height: 48px;
@@ -25,7 +33,7 @@
             @extend input;
         }
         &.file-control {
-            @include flex($align-items: center);
+            @include flex($align-items: center, $flex-direction: row);
             background-color: rgba(255, 255, 255, .4);
             padding: .5em;
             height: 48px;
@@ -41,6 +49,7 @@
                     display: none;
                 }
                 span {
+                    padding: 0 .2rem;
                     font-weight: map-get($font-weight, 'regular');
                 }
             }
