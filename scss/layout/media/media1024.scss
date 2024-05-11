@@ -1,0 +1,27 @@
+// Media Query: 1024px
+@media screen and (max-width: 1024px) {
+    // Home
+    #home {
+        .banner {
+            title, .content {
+                width: 80%;
+            }
+        }
+        .dnd-academy {
+            img {
+                width: 45%;
+            }
+        }
+    }
+
+    // Academia DnD
+    #dnd-academy {
+        .initial-product {
+            .product {
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}

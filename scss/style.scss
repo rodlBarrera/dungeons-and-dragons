@@ -1,0 +1,26 @@
+// Utilities
+@import './utilities/variables';
+@import './utilities/mixins';
+
+// Base
+@import './base/reset';
+@import './base/general';
+
+// Components
+@import './components/button';
+@import './components/card';
+@import './components/form';
+
+// Layout
+@import './layout/header';
+@import './layout/main-index';
+@import './layout/main-dnd-academy';
+@import './layout/main-tools';
+@import './layout/main-store';
+@import './layout/main-consults';
+@import './layout/footer';
+
+@import './layout/media/media1024.scss';
+@import './layout/media/media768.scss';
+@import './layout/media/media664.scss';
+@import './layout/media/media576.scss';

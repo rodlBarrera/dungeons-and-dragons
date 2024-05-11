@@ -1,0 +1,86 @@
+// Header
+.header {
+    background-color: map-get($color, 'red');
+    width: 100%;
+    .logo {
+        width: auto;
+        height: auto;
+        @include flex($justify-content: center, $align-items: center);
+        height: 70px;
+        & > img {
+            width: 
+            300px;
+            height: auto;
+        }
+        #menu-hamb {
+            display: none;
+        }
+    }
+    .menu {
+        background-color: map-get($color, 'blue-gray');
+        height: 70px;
+        @include flex($justify-content: center, $align-items: center);
+        .menuNav {
+            @include flex($flex-wrap: wrap);
+            margin: 0;
+            padding: 0;
+            li {
+                display: block;
+                list-style: none;
+                font-size: 12px;
+                a {
+                    padding: 8px 36px;
+                    color: map-get($color, 'white');
+                    font-weight: map-get($font-weight, 'regular');
+                    display: block;
+                    width: 100%;
+                }
+                span {
+                    padding: 8px 36px;
+                    color: map-get($color, 'white');
+                    font-weight: map-get($font-weight, 'regular');
+                    display: block;
+                    width: 100%;
+                }
+                &:hover {
+                    border-bottom: 2px solid map-get($color, 'red-dark');
+                    cursor: pointer;
+                    a {
+                        padding-bottom: 6px;
+                    }
+                    ~ {
+                        li {
+                            a {
+                                padding-bottom: 6px;
+                            }
+                        }
+                    }
+                    .menu-vertical {
+                        display: block;
+                        li{
+                            &:hover {
+                                background-color: map-get($color, 'blue-gray-light');
+                                border: none;
+                                width: 100%; 
+                            }
+                            a {
+                                border: 0;
+                                padding: 1.5em 3em;
+                            }
+                        }
+                    }
+                }
+                &[data-type="menuSub"]:hover {
+                    border: none;
+                }
+                .menu-vertical {
+                    position: absolute;
+                    display: none;
+                    background-color: map-get($color, 'blue-gray');
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+// Academia DnD
+#dnd-academy {
+    h2 {
+        margin-bottom: 36px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .academy-content {
+        margin-bottom: 60px;
+    }
+    iframe {
+        margin-bottom: 16px;
+    }
+    .banner {
+        @include banner_small('../assets/img/academia-dnd.png', cover, 40%, 200px);
+    }
+    .options {
+        @include flex(center, center, $gap: 24px, $flex-wrap: wrap);
+        padding: 3.75rem 0;
+        .btn-option {
+            @include flex(center, center, 8px, column);
+            height: 120px;
+            width: 120px;
+            background-color: map-get($color, 'red');
+            font-size: 12px;
+            color: map-get($color, 'white');
+            text-align: center;
+            cursor: pointer;
+            padding: 1em;
+            &.selected {
+                background-color: map-get($color, 'red-dark');
+            }
+            img {
+                width: auto;
+                height: 36px;
+            }
+            span {
+                font-weight: map-get($font-weight, 'regular');
+            }
+        }
+    }
+    #section-what-is-dnd {
+        .content {
+            @include flex($align-items: center, $gap: 24px);
+            .info {
+                width: 50%;
+            }
+            img {
+                @extend .info;
+            }
+        }
+    }
+    #section-how-play-dnd {
+        .info {
+            @include flex($align-items: center, $flex-direction: column);
+        }
+    }
+    #section-how-create-character {
+        @extend #section-how-play-dnd;
+    }
+    #section-resource {
+        @extend #section-how-play-dnd;
+        .btn-download {
+            @include flex(space-between, center);
+            width: 250px;
+            span {
+                font-weight: map-get($font-weight, 'regular');
+            }
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    .initial-product {
+        width: 100%;
+        @include banner('../assets/img/producto_inicial.png', cover, top, top, $height: 550px);
+        .flex {
+            @include flex(center, center, 1.5rem);
+        }
+        .info {
+            width: 50%;
+            p {
+                margin-bottom: 0px;
+            }
+            button {
+                margin-top: 2.25rem;
+            }
+        }
+        .product {
+            @extend .info;
+            @include flex(center, center);
+            img {
+                width: 60%;
+            }
+        }
+    }
+}

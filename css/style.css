@@ -1,1805 +1,1106 @@
-/* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Variables */
-:root {
-    --color-red: #9E0B0F;
-    --color-red-dark: #780A0D;
-    --color-blue-gray: #232226;
-    --color-blue-gray-light: #333333;
-    --color-input: #CFD3D4;
-    --color-label: #ABAFB1;
-    --bg-base-first: #E1DED3;
-    --bg-base-second: #DDD0AF;
-    --color-white: #FFFFFF;
-    --color-black: #000000;
-    --font-regular: 400;
-    --font-semibold: 600;
-    --font-bold: 700;
-    --font-extrabold: 800;
-    --md-title: 48px;
-    --md-middle-title: 36px;
-    --md-sub-title: 24px;
-    --md-small-text: 12px;
-    --sm-title: 36px;
-    --sm-middle-title: 28px;
-    --sm-sub-title: 20px;
-    --sm-small-text: 8px;
-    --xs-title: 32px;
-    --xs-middle-title: 24px;
-    --xs-sub-title: 16px;
-    --xs-small-text: 8px;
-}
-
-/* General */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
-    font-family: "Poppins", sans-serif !important;
-    font-size: 16px;
-    background: radial-gradient(var(--bg-base-first) 50%, var(--bg-base-second)) !important;
-}
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px;
+  background: radial-gradient(#E1DED3 50%, #DDD0AF) !important; }
 
 main {
-    min-height: calc(100vh - 210px);
-}
+  min-height: calc(100vh - 210px); }
+
+p {
+  line-height: 1.5rem; }
 
 h1 {
-    font-weight: var(--font-extrabold);
-    font-size: var(--md-title);
-}
+  font-weight: 800;
+  font-size: 48px; }
 
 h2 {
-    font-weight: var(--font-bold);
-    font-size: var(--md-sub-title);
-    margin: 0;
-}
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0; }
 
 span {
-    font-weight: var(--font-semibold);
-}
+  font-weight: 600; }
 
 a, a:hover, a::selection {
-    text-decoration: none;
-    color: var(--color-black);
-}
+  text-decoration: none;
+  color: #000000; }
 
 .dnd-container {
-    padding: 0 10vw;
-    height: 100%;
-}
-
-.btn-primary {
-    font-family: "Poppins", sans-serif;
-    background: var(--color-red);
-    padding: 1rem 1.5rem;
-    color: var(--color-white);
-    font-weight: var(--font-regular);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background: var(--color-red-dark);
-}
+  padding: 0 10vw;
+  height: 100%; }
 
 .hidden {
-    display: none !important;
-}
+  display: none !important; }
+
+.btn-primary {
+  font-family: "Poppins", sans-serif;
+  background: #9E0B0F;
+  padding: 1rem 1.5rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer; }
+  .btn-primary:hover {
+    background: #780A0D; }
 
 .btn-badget {
-    background-color: var(--color-red);
-    color: var(--color-white);
-    padding: .5em 2em;
-    font-weight: var(--font-semibold);
-    border: 0;
-    border-radius: 8px;
-    height: 32px;
-    cursor: pointer;
-}
+  background-color: #9E0B0F;
+  color: #FFFFFF;
+  padding: .5em 2em;
+  font-weight: 600;
+  border: 0;
+  border-radius: 8px;
+  height: 32px;
+  cursor: pointer; }
+  .btn-badget:hover, .btn-badget.selected {
+    background-color: #780A0D; }
+  .btn-badget img {
+    height: 100%; }
 
-.btn-badget:hover, .btn-badget.selected {
-    background-color: var(--color-red-dark);
-}
-
-.btn-badget img {
-    height: 100%;
-}
-
-
-
-/* Media Query - General */
-@media screen and (768px >= width) {
-    h1 {
-        font-size: var(--sm-title);
-    }
-    
-    h2 {
-        font-size: var(--sm-sub-title);
-    }
-
-    main {
-        min-height: calc(100vh - 140px);
-    }
-}
-
-@media screen and (576px >= width >= 320px) {
-    h1 {
-        font-size: var(--xs-title);
-    }
-    
-    h2 {
-        font-size: var(--xs-sub-title);
-    }
-
-    main {
-        min-height: calc(100vh - 198px);
-    }
-}
-
-
-/* Card */
 .card {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    border-radius: 16px;
-    gap: 0;
-    color: var(--color-blue-gray);
-    font-weight: var(--font-semibold);
-    background: var(--color-white);
-    text-align: center;
-}
-
-.card img {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  color: #232226;
+  font-weight: 600;
+  background: #FFFFFF;
+  text-align: center; }
+  .card img {
     display: block;
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-}
-
-.card .card-content {
+    border-top-right-radius: 16px; }
+  .card .card-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     text-align: left;
     height: 100px;
-    width: 100%;
-}
+    width: 100%; }
+    .card .card-content .name {
+      width: 70%; }
+    .card .card-content img {
+      width: 32px;
+      height: 32px;
+      filter: invert(13%) sepia(56%) saturate(6817%) hue-rotate(341deg) brightness(67%) contrast(123%); }
 
-.card .card-content .name {
-    width: 70%;
-}
-
-.card .card-content img {
-    width: 32px;
-    height: 32px;
-    filter: invert(13%) sepia(56%) saturate(6817%) hue-rotate(341deg) brightness(67%) contrast(123%);
-}
-
-
-/* Formulario */
 .form .form-control {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1rem;
-}
-
-.form .form-control label {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem; }
+  .form .form-control label {
     margin-bottom: .5rem;
-    font-size: 16px;
-}
-
-.form .form-control input,
-.form .form-control select,
-.form .form-control textarea {
+    font-size: 1rem; }
+  .form .form-control .btn-primary.flex {
+    display: flex;
+    gap: 8px; }
+    .form .form-control .btn-primary.flex span {
+      font-weight: 400; }
+  .form .form-control input, .form .form-control select, .form .form-control textarea {
     font-family: "Poppins", sans-serif;
-}
-
-.form .form-control input,
-.form .form-control select {
     min-height: 48px;
-}
-
-.form .form-control input:focus-visible,
-.form .form-control select:focus-visible,
-.form .form-control textarea:focus-visible {
-    outline: none;
-}
-
-.form .form-control input,
-.form-control textarea,
-.form-control select {
     padding: .75rem;
     width: 100%;
     border-radius: 4px;
-    border: 1px solid var(--color-input);
-}
-
-.form .file-control {
+    border: 1px solid #CFD3D4; }
+    .form .form-control input:focus-visible, .form .form-control select:focus-visible, .form .form-control textarea:focus-visible {
+      outline: none; }
+  .form .form-control.file-control {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    background-color: rgba(255, 255, 255, .4);
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.4);
     padding: .5em;
-    height: 48px;
-}
+    height: 48px; }
+    .form .form-control.file-control label {
+      font-size: 10px;
+      padding: .5rem;
+      margin: 0;
+      width: 40em; }
+    .form .form-control.file-control input[type="file"], .form .form-control.file-control select[type="file"], .form .form-control.file-control textarea[type="file"] {
+      border: none; }
+      .form .form-control.file-control input[type="file"]::file-selector-button, .form .form-control.file-control select[type="file"]::file-selector-button, .form .form-control.file-control textarea[type="file"]::file-selector-button {
+        display: none; }
+      .form .form-control.file-control input[type="file"] span, .form .form-control.file-control select[type="file"] span, .form .form-control.file-control textarea[type="file"] span {
+        padding: 0 .2rem;
+        font-weight: 400; }
+  .form .form-control input[type='submit'], .form .form-control select[type='submit'], .form .form-control textarea[type='submit'] {
+    margin-top: 1rem; }
+    .form .form-control input[type='submit'] .flex, .form .form-control select[type='submit'] .flex, .form .form-control textarea[type='submit'] .flex {
+      display: flex;
+      gap: 8px; }
 
-.form .file-control label {
-    font-size: 10px;
-    padding: .5rem;
-    margin: 0;
-}
-
-.form .file-control label {
-    width: 40em;
-}
-
-
-.form .form-control .btn-primary.flex {
-    display: flex;
-    gap: 8px;
-}
-
-.form .form-control .btn-primary span {
-    font-weight: var(--font-regular);
-}
-
-.form .form-control input[type="file"] {
-    border: none;
-}
-
-.form .form-control input[type="file"]::file-selector-button {
-  display: none;
-}
-
-.form input[type='submit'] {
-    margin-top: 1rem;
-}
-
-
-
-/* Header */
 .header {
-    background-color: var(--color-red);
-    width: 100%;
-}
-
-.header .logo {
+  background-color: #9E0B0F;
+  width: 100%; }
+  .header .logo {
     width: auto;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-}
-
-.header .logo > img {
-    width: 308px;
-    height: auto;
-}
-
-.header .logo #menu-hamb {
-    display: none;
-}
-
-.header .menu {
-    background-color: var(--color-blue-gray);
+    height: 70px; }
+    .header .logo > img {
+      width: 300px;
+      height: auto; }
+    .header .logo #menu-hamb {
+      display: none; }
+  .header .menu {
+    background-color: #232226;
     height: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.header .menu .menuNav {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-}
-
-.header .menu .menuNav li {
-    display: block;
-    list-style: none;
-    font-size: 12px;
-}
-
-.header .menu .menuNav li a, .header .menu .menuNav li span{
-    padding: 8px 36px;
-    color: var(--color-white);
-    font-weight: var(--font-regular);
-    display: block;
-    width: 100%;
-}
-
-.header .menu .menuNav li:hover {
-    border-bottom: 2px solid var(--color-red-dark);
-    cursor: pointer;
-}
-
-.header .menu .menuNav li[data-type="menuSub"]:hover {
-    border: none;
-}
-
-.header .menu .menuNav li:hover a, .header .menu .menuNav li:hover ~ li a{
-    padding-bottom: 6px;
-}
-
-.header .menu .menuNav li .menu-vertical {
-    position: absolute;
-    display: none;
-    background-color: var(--color-blue-gray);
-    margin: 0;
-    padding: 0;
-}
-
-.header .menu .menuNav li:hover .menu-vertical {
-    display: block;
-}
-
-.header .menu .menuNav li:hover .menu-vertical li a {
-    border: 0;
-    padding: 1.5em 3em;
-}
-
-.header .menu .menuNav li:hover .menu-vertical li:hover {
-    background-color: var(--color-blue-gray-light);
-    border: none;
-    width: 100%;
-}
-
-/* Media Query - Header */
-@media screen and (768px >= width >= 320px) {
-    .header .logo {
-        justify-content: space-between;
-        padding: 0 1rem;
-    }
-
-    .header .logo picture img {
-        width: 80%;
-    }
-
-    .header .logo #menu-hamb {
+    align-items: center; }
+    .header .menu .menuNav {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0; }
+      .header .menu .menuNav li {
         display: block;
-        background: none;
-        border: none;
-    }
+        list-style: none;
+        font-size: 12px; }
+        .header .menu .menuNav li a, .header .menu .menuNav li a::selection {
+          padding: 8px 36px;
+          color: #FFFFFF;
+          font-weight: 400;
+          display: block;
+          width: 100%; }
+        .header .menu .menuNav li span {
+          padding: 8px 36px;
+          color: #FFFFFF;
+          font-weight: 400;
+          display: block;
+          width: 100%; }
+        .header .menu .menuNav li:hover {
+          border-bottom: 2px solid #780A0D;
+          cursor: pointer; }
+          .header .menu .menuNav li:hover a, .header .menu .menuNav li:hover a::selection {
+            padding-bottom: 6px; }
+          .header .menu .menuNav li:hover ~ li a, .header .menu .menuNav li:hover ~ li a::selection {
+            padding-bottom: 6px; }
+          .header .menu .menuNav li:hover .menu-vertical {
+            display: block; }
+            .header .menu .menuNav li:hover .menu-vertical li:hover {
+              background-color: #333333;
+              border: none;
+              width: 100%; }
+            .header .menu .menuNav li:hover .menu-vertical li a, .header .menu .menuNav li:hover .menu-vertical li a::selection {
+              border: 0;
+              padding: 1.5em 3em; }
+        .header .menu .menuNav li[data-type="menuSub"]:hover {
+          border: none; }
+        .header .menu .menuNav li .menu-vertical {
+          position: absolute;
+          display: none;
+          background-color: #232226;
+          margin: 0;
+          padding: 0; }
 
-    .header .logo #menu-hamb img{
-        width: 40px;
-        height: 40px;
-    }
-
-    .header .menu {
-        width: 100%;
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        transition: visibility 0s, opacity 0.5s, height 1s linear;
-    }
-
-    .header .menu.open {
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-    }
-
-    .header .menu.open .menuNav {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .header .menu.open .menuNav li {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    .header .menu.open .menuNav li a, .header .menu.open .menuNav li span {
-        padding: 1.5em !important;
-    }
-
-    .header .menu.open .menuNav li:hover {
-        background-color: var(--color-red-dark);
-        cursor: pointer;
-    }
-
-    .header .menu.open .menuNav li[data-type='menuSub']:hover {
-        padding-left: 0;
-        padding-bottom: 0;
-        padding-right: 0;
-        border: 0;
-    }
-    
-    .header .menu.open .menuNav li .menu-vertical {
-        position: initial;
-        display: none;
-        background-color: var(--color-blue-gray-light);
-    }
-    
-    .header .menu .menuNav li.open .menu-vertical {
-        display: block;
-    }
-    
-    .header .menu .menuNav li:hover .menu-vertical li a {
-        border: 0;
-    }
-    
-    .header .menu .menuNav li:hover .menu-vertical li:hover {
-        border-bottom: 3px solid var(--color-red-dark);
-        width: 100%;
-    }
-}
-
-/* Home */
-/* Home - Banner */
 #home .banner {
-    background-image: url('../assets/img/home_banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    color: var(--color-white);
-}
-
-#home .banner .flex {
+  background-image: url("../assets/img/home_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  height: 500px;
+  color: #FFFFFF; }
+  #home .banner .flex {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     gap: 40px;
-}
-
-#home .banner .title {
-    width: 45%;
-}
-
-#home .banner .content {
+    flex-direction: column; }
+  #home .banner .title {
+    width: 45%; }
+  #home .banner .content {
     font-size: 18px;
-    font-weight: var(--font-bold);
-    width: 45%;
-}
+    font-weight: 700;
+    width: 45%; }
 
-
-/* Media Query - Home - Banner */
-@media screen and (1024px >= width) {
-    #home .banner .title,
-    #home .banner .content {
-        width: 80%;
-    }
-}
-
-@media screen and (768px >= width) {
-    #home .banner {
-        text-align: center;
-        height: auto;
-        padding: 3em 0;
-    }
-
-    #home .banner .title {
-        width: 100%;
-        font-size: var(--sm-title);
-    }
-    
-    #home .banner .content {
-        font-size: 16px;
-        font-weight: var(--font-bold);
-        width: 100%;
-    }
-}
-
-@media screen and (576px >= width >= 320px) {
-    #home .banner {
-        text-align: center;
-        height: auto;
-        padding: 3em 0;
-    }
-
-    #home .banner .tile {
-        width: 100%;
-        font-size: var(--xs-title);
-    }
-    
-    #home .banner .content {
-        font-size: 14px;
-        font-weight: var(--font-bold);
-        width: 100%;
-    }
-}
-
-
-/* Home - Academia de DnD */
 #home .dnd-academy {
-    padding: 4rem 0;
-}
-
-#home .dnd-academy .flex {
+  padding: 4rem 0; }
+  #home .dnd-academy .flex {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 24px;
-}
+    align-items: center;
+    gap: 24px; }
+  #home .dnd-academy .content {
+    width: 45%; }
+    #home .dnd-academy .content P {
+      margin-top: 1rem;
+      margin-bottom: 2.25rem; }
 
-#home .dnd-academy .content {
-    width: 45%;
-}
-
-
-#home .dnd-academy p {
-    margin-top: 1rem;
-    margin-bottom: 2.25rem;
-}
-
-
-/* Media Query - Home - Banner */
-@media screen and (1024px >= width) {
-    #home .dnd-academy img {
-        width: 45%;
-    }
-}
-
-@media screen and (768px >= width) {
-    #home .dnd-academy img {
-        width: 45%;
-    }
-
-    #home .dnd-academy {
-        padding: 3em 0;
-    }
-
-    #home .dnd-academy p {
-        margin-top: .5rem;
-        margin-bottom: 1.375rem;
-    }
-    
-}
-
-@media screen and (576px >= width >= 320px) {
-    #home .dnd-academy {
-        padding: 3em 0;
-    }
-
-    #home .dnd-academy .flex {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    #home .dnd-academy .content {
-        text-align: center;
-        width: 100%;
-    }
-    
-    #home .dnd-academy img {
-        width: 100%;
-    }
-}
-
-
-/* Home - Herramientas */
 #home .tools .title {
-    color: var(--color-white);
-    background-color: var(--color-blue-gray);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
+  color: #FFFFFF;
+  background-color: #232226;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
 #home .tools .tools-options {
-    width: 100%;
-    height: 24em;
-    display: flex;
-}
+  width: 100%;
+  height: 24em;
+  display: flex; }
 
 #home .tools .slide {
-    width: calc(100vw / 3);
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: width 500ms linear;
-    cursor: pointer;
-}
-
-#home .tools .slide.hiddenToggle, #home .tools .slide.hiddenToggle img {
-    width: 0;
-}
-
-#home .tools .slide img {
+  width: calc(100vw / 3);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 250ms linear;
+  cursor: pointer; }
+  #home .tools .slide img {
     width: 100px;
-    height: 100px;
-}
-
-#home .tools #tools-player {
-    background-image: url('../assets/img/herramientas_jugador.png');
+    height: 100px; }
+  #home .tools .slide.hiddenToggle {
+    width: 0; }
+    #home .tools .slide.hiddenToggle img {
+      display: none; }
+  #home .tools .slide#tools-player {
+    background-image: url("../assets/img/herramientas_jugador.png");
     background-repeat: no-repeat;
     background-size: 100vw;
-    background-position-y: center;
     background-position-x: left;
-}
-
-#home .tools #tools-dungeon-master {
-    background-image: url('../assets/img/herramientas_dungeon_master.png');
+    background-position-y: center;
+    color: #FFFFFF; }
+  #home .tools .slide#tools-dungeon-master {
+    background-image: url("../assets/img/herramientas_dungeon_master.png");
     background-repeat: no-repeat;
     background-size: 100vw;
-    background-position-y: center;
     background-position-x: center;
-}
-
-#home .tools #tools-rules {
-    background-image: url('../assets/img/herramientas_reglas.png');
+    background-position-y: center;
+    color: #FFFFFF; }
+  #home .tools .slide#tools-rules {
+    background-image: url("../assets/img/herramientas_reglas.png");
     background-repeat: no-repeat;
     background-size: 100vw;
-    background-position-y: center;
     background-position-x: right;
-}
-
-#home .tools .slide .info {
-    display: none;
-}
-
-#home .tools .slide.opened {
-    width: 100vw;
-}
-
-#home .tools .slide.opened .info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-    color: var(--color-white);
-    width: 100%;
-}
-
-#home .tools .slide.opened > img {
-    display: none;
-}
-
-#home .tools .info .toolTitle {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#home .tools .info .toolTitle .toolTitle-content {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-}
-
-#home .tools .info .toolTitle .toolTitle-content img {
-    width: 36px;
-    height: 36px;
-}
-
-#home .tools .slide .toggle-arrow {
-    display: none;
-}
-
-#home .tools .info p {
-    width: 60vw;
-    font-weight: var(--font-semibold);
-}
-
-
-/* Media Query - Home - Tools */
-@media screen and (768px >= width >= 320px) {    
-    #home .tools .tools-options {
-        flex-direction: column;
-        height: auto;
-        background-color: var(--color-blue-gray);
-    }
-    
-    #home .tools .slide {
-        width: 100%;
-        height: 150px;
-        transition: height 100ms linear;
-    }
-    
-    #home .tools .slide.hiddenToggle, #home .tools .slide.hiddenToggle img {
-        height: 0;
-        width: 0;
-    }
-    
-    #home .tools .slide > img {
-        display: none;
-    }
-
-    #home .tools #tools-player,
-    #home .tools #tools-dungeon-master,
-    #home .tools #tools-rules {
-        background-size: cover;
-        background-position-x: center;
-    }
-
-    #home .tools .slide .toggle-arrow {
-        width: 20%;
-        height: auto;
+    background-position-y: center;
+    color: #FFFFFF; }
+  #home .tools .slide .info, #home .tools .slide #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide img, #home .tools .slide #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide .product {
+    display: none; }
+    #home .tools .slide .info .toolTitle, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle, #home .tools .slide #dnd-academy .initial-product .product .toolTitle, #dnd-academy .initial-product #home .tools .slide .product .toolTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px; }
+      #home .tools .slide .info .toolTitle .toolTitle-content, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle .toolTitle-content, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle .toolTitle-content, #home .tools .slide #dnd-academy .initial-product .product .toolTitle .toolTitle-content, #dnd-academy .initial-product #home .tools .slide .product .toolTitle .toolTitle-content {
         display: flex;
-        justify-content: center;
-    }
+        align-items: center;
+        gap: 24px; }
+        #home .tools .slide .info .toolTitle .toolTitle-content img, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle .toolTitle-content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle .toolTitle-content img, #home .tools .slide #dnd-academy .initial-product .product .toolTitle .toolTitle-content img, #dnd-academy .initial-product #home .tools .slide .product .toolTitle .toolTitle-content img {
+          width: 36px;
+          height: 36px; }
+    #home .tools .slide .info p, #home .tools .slide #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #home .tools .slide img p, #home .tools .slide #dnd-academy .initial-product .product p, #dnd-academy .initial-product #home .tools .slide .product p {
+      width: 60vw;
+      font-weight: 600; }
+  #home .tools .slide.opened {
+    width: 100vw; }
+    #home .tools .slide.opened .info, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img, #home .tools .slide.opened #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide.opened .product {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-direction: column;
+      color: #FFFFFF;
+      width: 100%; }
+    #home .tools .slide.opened > img {
+      display: none; }
+  #home .tools .slide .toggle-arrow {
+    display: none; }
 
-    #home .tools .slide .toggle-arrow img {
-        width: auto;
-        height: 100%;
-        transition: transform 100ms linear
-    }
-
-    #home .tools .slide.opened .toggle-arrow img {
-        transform: rotate(90deg);
-    }
-    
-    #home .tools .slide.opened {
-        height: auto;
-    }
-    
-    #home .tools .slide .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 24px;
-        color: var(--color-white);
-        width: 100%;
-        padding-right: 0;
-    }
-
-    #home .tools .slide.hiddenToggle .info,
-    #home .tools .slide.hiddenToggle .toggle-arrow,
-    #home .tools .slide .info .toolTitle ~ p,
-    #home .tools .slide .info .toolTitle ~ a {
-        display: none;
-    }
-
-    #home .tools .slide.opened .info {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    #home .tools .slide.opened .info .toolTitle ~ p,
-    #home .tools .slide.opened .info .toolTitle ~ a {
-        display: block;
-    }
-}
-
-
-/* Home - Tienda */
 #home .store {
-    position: relative;
-    min-height: 480px;
-}
-
-#home .store .swiper {
-    width: 100%;
-    height: 100%;
-}
-
-#home .store .store-content {
+  position: relative;
+  min-height: 480px; }
+  #home .store .store-content {
     padding-top: 2em;
-    padding-bottom: 2em;
-}
+    padding-bottom: 2em; }
+    #home .store .store-content .swiper {
+      width: 100%;
+      height: 100%; }
+      #home .store .store-content .swiper .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6.25rem; }
+        #home .store .store-content .swiper .title .slider-btns {
+          display: flex;
+          gap: 12px; }
+          #home .store .store-content .swiper .title .slider-btns .slide-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; }
+            #home .store .store-content .swiper .title .slider-btns .slide-btn.btn-prev {
+              border: 1px solid #9E0B0F; }
+            #home .store .store-content .swiper .title .slider-btns .slide-btn.btn-next {
+              background-color: #9E0B0F; }
+    #home .store .store-content .store-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 140px; }
 
-#home .store .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6.25rem;
-}
-
-#home .store .title .slider-btns {
-    display: flex;
-    gap: 12px;
-}
-
-#home .store .title .slide-btn {
-    width: 50px;
-    height: 50px;
+#home .consults {
+  background-image: url("../assets/img/consultas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  height: 34.375rem;
+  color: #FFFFFF; }
+  #home .consults .flex {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    gap: 24px; }
+    #home .consults .flex .info, #home .consults .flex #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .consults .flex img, #home .consults .flex #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .consults .flex .product {
+      width: 55%; }
+      #home .consults .flex .info h2, #home .consults .flex #dnd-academy #section-what-is-dnd .content img h2, #dnd-academy #section-what-is-dnd .content #home .consults .flex img h2, #home .consults .flex #dnd-academy .initial-product .product h2, #dnd-academy .initial-product #home .consults .flex .product h2 {
+        margin-bottom: 2.25rem; }
+    #home .consults .flex .form {
+      width: 35%; }
 
-#home .store .title .slider-btns .btn-prev {
-    border: 1px solid var(--color-red);
-}
-
-#home .store .title .slider-btns .btn-next {
-    background-color: var(--color-red);
-}
-
-#home .store .store-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 140px;
-}
-
-
-/* Media Query - Home - Tienda */
-@media screen and (576px >= width >= 320px) {
-    #home .store .title .slider-btns {
-        display: none
-    }
-}
-
-
-/* Home - Consultas */
-#home .queries {
-    height: 34.375rem;
-    background-image: url('../assets/img/consultas.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--color-white);
-}
-
-#home .queries .flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-}
-
-#home .queries .info {
-    width: 55%;
-}
-
-#home .queries .form {
-    width: 35%;
-}
-
-#home .queries .info h2 {
-    margin-bottom: 2.25rem;
-}
-
-
-/* Media Query - Home - Consultas */
-@media screen and (768px >= width >= 320px) {
-    #home .queries {
-        height: auto;
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-}
-
-@media screen and (768px >= width) {
-    #home .queries .info, #home .queries .form {
-        width: 50%;
-    }
-}
-
-
-@media screen and (576px >= width >= 320px) {
-    #home .queries .flex {
-        flex-direction: column;
-    }
-
-    #home .queries .info, #home .queries .form {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
-
-/* Academia de DnD */
 #dnd-academy h2 {
-    margin-bottom: 36px;
-}
+  margin-bottom: 36px; }
 
 #dnd-academy p {
-    margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 #dnd-academy .academy-content {
-    margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
 
 #dnd-academy iframe {
-    margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
-/* Academia de DnD - Banner */
 #dnd-academy .banner {
-    width: 100%;
-    height: 200px;
-    background-image: url('../assets/img/academia-dnd.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#dnd-academy .banner h1{
-    margin-bottom: 1rem;
-}
-
-#dnd-academy .banner .flex {
+  background-image: url("../assets/img/academia-dnd.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: top;
+  background-position-y: 40%;
+  height: 200px;
+  color: #FFFFFF;
+  width: 100%; }
+  #dnd-academy .banner .flex {
     display: flex;
-    align-items: flex-end;
-    color: var(--color-white);
-}
+    align-items: flex-end; }
+    #dnd-academy .banner .flex h1 {
+      margin-bottom: 1rem; }
 
-
-/* Media Query - Academia de DnD - Banner */
-@media screen and (576px >= width >= 320px) {
-    #dnd-academy .banner {
-        background-size: cover;
-    }
-}
-
-
-/* Academia de DnD - Selecciones */
 #dnd-academy .options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 3.75rem 0; }
+  #dnd-academy .options .btn-option {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 24px;
-    padding: 3.75rem 0;
-}
-
-#dnd-academy .options .btn-option {
-    display: flex;
+    align-items: center;
+    gap: 8px;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 120px;
     width: 120px;
-    background-color: var(--color-red);
+    background-color: #9E0B0F;
     font-size: 12px;
-    color: var(--color-white);
+    color: #FFFFFF;
     text-align: center;
     cursor: pointer;
-    padding: 1em;
-    gap: 8px;
-}
+    padding: 1em; }
+    #dnd-academy .options .btn-option.selected {
+      background-color: #780A0D; }
+    #dnd-academy .options .btn-option img {
+      width: auto;
+      height: 36px; }
+    #dnd-academy .options .btn-option span {
+      font-weight: 400; }
 
-#dnd-academy .options .btn-option.selected {
-    background-color: var(--color-red-dark);
-}
-
-#dnd-academy .options .btn-option img {
-    width: auto;
-    height: 36px;
-}
-
-#dnd-academy .options .btn-option span {
-    font-weight: var(--font-regular);
-}
-
-
-/* Media Query - Academia de DnD - Selectores */
-@media screen and (576px >= width >= 320px) {
-    #dnd-academy .options {
-        flex-wrap: wrap;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
-
-/* Academia de DnD - Que es DnD */
 #dnd-academy #section-what-is-dnd .content {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
+  display: flex;
+  align-items: center;
+  gap: 24px; }
+  #dnd-academy #section-what-is-dnd .content .info, #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product .product, #dnd-academy .initial-product #section-what-is-dnd .content .product {
+    width: 50%; }
 
-#dnd-academy #section-what-is-dnd .content .info,
-#dnd-academy #section-what-is-dnd .content img {
-    width: 50%;
-}
-
-/* Media Query - Academia de DnD - Que es DnD */
-@media screen and (768px >= width >= 320px) {
-    #dnd-academy #section-what-is-dnd .content {
-        flex-direction: column;
-    }
-
-    #dnd-academy #section-what-is-dnd .content .info,
-    #dnd-academy #section-what-is-dnd .content img {
-        width: 100%;
-    }
-}
-
-
-/* Academia de DnD - Como jugar DnD */
-#dnd-academy #section-how-play-dnd .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* Media Query - Academia de DnD - Como jugar DnD */
-@media screen and (576px >= width >= 320px) {
-    #dnd-academy #section-how-play-dnd .info iframe {
-        width: 100%;
-    }
-}
-
-
-/* Academia de DnD - Como crear tu personaje */
-#dnd-academy #section-how-create-character .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* Media Query - Academia de DnD - Como crear tu personaje */
-@media screen and (576px >= width >= 320px) {
-    #dnd-academy #section-how-create-character .info iframe {
-        width: 100%;
-    }
-}
-
-
-/* Academia de DnD - Recursos */
-#dnd-academy #section-resource .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+#dnd-academy #section-how-play-dnd .info, #dnd-academy #section-how-create-character .info, #dnd-academy #section-resource .info, #dnd-academy #section-how-play-dnd #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #section-how-play-dnd img, #dnd-academy #section-how-create-character #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #section-how-create-character img, #dnd-academy #section-resource #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #section-resource img, #dnd-academy #section-how-play-dnd .initial-product .product, #dnd-academy .initial-product #section-how-play-dnd .product, #dnd-academy #section-how-create-character .initial-product .product, #dnd-academy .initial-product #section-how-create-character .product, #dnd-academy #section-resource .initial-product .product, #dnd-academy .initial-product #section-resource .product {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
 
 #dnd-academy #section-resource .btn-download {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 250px;
-}
-
-#dnd-academy #section-resource .btn-download span {
-    font-weight: var(--font-regular);
-}
-
-#dnd-academy #section-resource .btn-download img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px; }
+  #dnd-academy #section-resource .btn-download span {
+    font-weight: 400; }
+  #dnd-academy #section-resource .btn-download img {
     width: 40px;
-    height: 40px;
-}
+    height: 40px; }
 
-
-/* Media Query - Academia de DnD - Recursos */
-@media screen and (576px >= width >= 320px) {
-    #dnd-academy #section-resource .btn-download {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: auto;
-    }
-
-    #dnd-academy #section-resource .btn-download span {
-        display: none;
-    }
-}
-
-
-/* Academia de DnD - Producto Inicial */
 #dnd-academy .initial-product {
-    width: 100%;
-    height: 550px;
-    color: var(--color-white);
-    background-image: url('../assets/img/producto_inicial.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#dnd-academy .initial-product .flex {
+  width: 100%;
+  background-image: url("../assets/img/producto_inicial.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: top;
+  background-position-y: top;
+  height: 550px;
+  color: #FFFFFF; }
+  #dnd-academy .initial-product .flex {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-}
-
-#dnd-academy .initial-product .info,
-#dnd-academy .initial-product .product {
-    width: 50%;
-}
-
-#dnd-academy .initial-product .info p {
-    margin-bottom: 0px;
-}
-
-#dnd-academy .initial-product .info button {
-    margin-top: 2.25rem;
-}
-
-#dnd-academy .initial-product .product {
+    align-items: center;
+    gap: 1.5rem; }
+  #dnd-academy .initial-product .info, #dnd-academy .initial-product #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product img, #dnd-academy .initial-product .product {
+    width: 50%; }
+    #dnd-academy .initial-product .info p, #dnd-academy .initial-product #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content .initial-product img p, #dnd-academy .initial-product .product p {
+      margin-bottom: 0px; }
+    #dnd-academy .initial-product .info button, #dnd-academy .initial-product #section-what-is-dnd .content img button, #dnd-academy #section-what-is-dnd .content .initial-product img button, #dnd-academy .initial-product .product button {
+      margin-top: 2.25rem; }
+  #dnd-academy .initial-product .product {
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-#dnd-academy .initial-product .product img {
-    width: 60%;
-}
-
-
-/* Media Query - Academia de DnD - Producto Inicial */
-@media screen and (1024px >= width) {
+    align-items: center; }
     #dnd-academy .initial-product .product img {
-        width: 70%;
-    }
-}
+      width: 60%; }
 
-@media screen and (664px >= width >= 320px) {
-    #dnd-academy .initial-product {
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-    
-    #dnd-academy .initial-product .flex {
-        flex-direction: column-reverse;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-    
-    #dnd-academy .initial-product .info,
-    #dnd-academy .initial-product .product {
-        width: 100%;
-    }
-    
-    #dnd-academy .initial-product .info p {
-        margin-bottom: 0px;
-    }
-    
-    #dnd-academy .initial-product .info button {
-        margin-top: 1.5rem;
-    }
-    
-    #dnd-academy .initial-product .product {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-}
-
-
-/* Herramientas */
-#tools .banner {
-    width: 100%;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-#tools .banner h1{
-    margin-bottom: 1rem;
-}
-
-#tools .banner .flex {
+#tools .banner#player-tool {
+  background-image: url("../assets/img/herramientas_jugador.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: top;
+  background-position-y: 45%;
+  height: 200px;
+  color: #FFFFFF;
+  width: 100%; }
+  #tools .banner#player-tool .flex {
     display: flex;
-    align-items: flex-end;
-    color: var(--color-white);
-}
+    align-items: flex-end; }
+    #tools .banner#player-tool .flex h1 {
+      margin-bottom: 1rem; }
+
+#tools .banner#dungeon-master-tool {
+  background-image: url("../assets/img/herramientas_dungeon_master.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: top;
+  background-position-y: 35%;
+  height: 200px;
+  color: #FFFFFF;
+  width: 100%; }
+  #tools .banner#dungeon-master-tool .flex {
+    display: flex;
+    align-items: flex-end; }
+    #tools .banner#dungeon-master-tool .flex h1 {
+      margin-bottom: 1rem; }
+
+#tools .banner#rules-tool {
+  background-image: url("../assets/img/herramientas_reglas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: top;
+  background-position-y: 40%;
+  height: 200px;
+  color: #FFFFFF;
+  width: 100%; }
+  #tools .banner#rules-tool .flex {
+    display: flex;
+    align-items: flex-end; }
+    #tools .banner#rules-tool .flex h1 {
+      margin-bottom: 1rem; }
 
 #tools .tools-list {
-    margin: 48px 0;
-}
-
-#tools .tools-list .tools-grid + .tools-grid {
-    margin-top: 24px;
-}
-
-/* #tools .tools-list .tools-grid.row-2 {
-    grid-template-rows: repeat(2, 1fr);
-}
-
-#tools .tools-list .tools-grid.row-3 {
-    grid-template-rows: repeat(3, 1fr);
-}
-
-#tools .tools-list .tools-grid .tool.lg {
-    grid-column: span 2;
-} */
-
-#tools .tools-list .tools-grid .tool {
-    display: flex;
-    align-items: flex-end;
+  margin: 48px 0; }
+  #tools .tools-list .tools-grid + .tools-grid {
+    margin-top: 24px; }
+  #tools .tools-list .tools-grid .tool {
     height: 250px;
-}
-
-#tools .tools-list .tools-grid .tool .title {
-    color: var(--color-white);
-    background-color: rgba(0, 0, 0, .5);
-    padding: 1em;
-    width: 100%;
-}
-
-
-/* Media Query Herramientas */
-
-@media screen and (576px > width) {
-    #tools .tools-list .tools-grid .col-12 + .col-12 {
-        margin-top: 1.5rem;
-    }
-}
-
-@media screen and (576px >= width >= 320px) {
-    #tools .banner {
-        background-size: cover;
-    }
-
-    /* #tools .tools-list .tools-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    #tools .tools-list .tools-grid.row-2 {
-        grid-template-rows: 1fr;
-    }
-    
-    #tools .tools-list .tools-grid.row-3 {
-        grid-template-rows: 1fr;
-    }
-
-    #tools .tools-list .tools-grid .tool.lg {
-        grid-column: initial;
-    } */
-}
-
-
-/* Herramientas - Jugador */
-/* Herramientas - Jugador - Banner */
-#tools .banner#player-tool {
-    background-image: url('../assets/img/herramientas_jugador.png');
-    background-position-y: 45%;
-}
-
-
-/* Herramientas - Jugador - Grid */
-#tools .tools-list .tools-grid #tool-race {
-    background-image: url('../assets/img/jugador-razas.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-equipment {
-    background-image: url('../assets/img/jugador-equipos.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-spell {
-    background-image: url('../assets/img/jugador-hechizos.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-class {
-    background-image: url('../assets/img/jugador-clases.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-background {
-    background-image: url('../assets/img/jugador-trasfondo.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-
-/* Herramientas - Dungeon Master */
-/* Herramientas - Dungeon Master - Banner */
-#tools .banner#dungeon-master-tool {
-    background-image: url('../assets/img/herramientas_dungeon_master.png');
-    background-position-y: 35%;
-}
-
-
-/* Herramientas - Dungeon Master - Grid */
-#tools .tools-list .tools-grid #tool-treasure-generator {
-    background-image: url('../assets/img/dungeon-master-generador-tesoro.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-bestiary {
-    background-image: url('../assets/img/dungeon-master-bestiario.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-screen {
-    background-image: url('../assets/img/dungeon-master-screen.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-calculator-nd {
-    background-image: url('../assets/img/dungeon-master-calculadora-nd.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-
-
-/* Herramientas - Rules */
-/* Herramientas - Rules - Banner */
-#tools .banner#rules-tool {
-    background-image: url('../assets/img/herramientas_reglas.png');
-    background-position-y: 40%;
-}
-
-
-/* Herramientas - Rules - Grid */
-#tools .tools-list .tools-grid #tool-adventures {
-    background-image: url('../assets/img/reglas-aventuras.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-books {
-    background-image: url('../assets/img/reglas-libros.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-conditions {
-    background-image: url('../assets/img/reglas-condiciones.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-#tools .tools-list .tools-grid #tool-quick-references {
-    background-image: url('../assets/img/reglas-referencias-rapidas.png');
-    background-size: cover;
-    background-position-y: 40%;
-}
-
-
-/* Store */
-/* Store - Banner */
-#store .banner {
-    width: 100%;
-    height: 200px;
-    background-image: url('../assets/img/tienda.png');
+    display: flex;
+    align-items: flex-end; }
+    #tools .tools-list .tools-grid .tool .title {
+      color: #FFFFFF;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1em;
+      width: 100%; }
+  #tools .tools-list .tools-grid #tool-race {
+    background-image: url("../assets/img/jugador-razas.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 60%;
-}
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-equipment {
+    background-image: url("../assets/img/jugador-equipos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-spell {
+    background-image: url("../assets/img/jugador-hechizos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-class {
+    background-image: url("../assets/img/jugador-clases.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-background {
+    background-image: url("../assets/img/jugador-trasfondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-treasure-generator {
+    background-image: url("../assets/img/dungeon-master-generador-tesoro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-bestiary {
+    background-image: url("../assets/img/dungeon-master-bestiario.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-screen {
+    background-image: url("../assets/img/dungeon-master-screen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-calculator-nd {
+    background-image: url("../assets/img/dungeon-master-calculadora-nd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-adventures {
+    background-image: url("../assets/img/reglas-aventuras.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-books {
+    background-image: url("../assets/img/reglas-libros.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-conditions {
+    background-image: url("../assets/img/reglas-condiciones.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
+  #tools .tools-list .tools-grid #tool-quick-references {
+    background-image: url("../assets/img/reglas-referencias-rapidas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: top;
+    background-position-y: 40%;
+    color: #FFFFFF; }
 
-#store .banner h1{
-    margin-bottom: 1rem;
-}
-
-#store .banner .flex {
+#store .banner {
+  background-image: url("../assets/img/tienda.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: top;
+  background-position-y: 60%;
+  height: 200px;
+  color: #FFFFFF;
+  width: 100%; }
+  #store .banner .flex {
     display: flex;
-    align-items: flex-end;
-    color: var(--color-white);
-}
+    align-items: flex-end; }
+    #store .banner .flex h1 {
+      margin-bottom: 1rem; }
 
-
-/* Media Query - Store - Banner */
-@media screen and (576px >= width >= 320px) {
-    #store .banner {
-        background-size: cover;
-    }
-}
-
-
-/* Store - Search */
 #store #search {
-    background-color: var(--color-blue-gray);
-    height: 160px;
-}
-
-#store #search .dnd-container.flex{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#store #search .form {
-    width: 50%;
-}
-
-#store #search .form .form-control {
+  height: 160px;
+  background-color: #232226; }
+  #store #search .flex {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
+    align-items: center; }
+  #store #search .form {
+    width: 50%; }
+    #store #search .form .form-control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row; }
+      #store #search .form .form-control input, #store #search .form .form-control select, #store #search .form .form-control textarea {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px; }
+      #store #search .form .form-control .btn-search {
+        height: 100%;
+        height: 48px;
+        padding: 8px 12px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px; }
+        #store #search .form .form-control .btn-search img {
+          width: auto;
+          height: 100%; }
 
-#store #search .form .form-control input {
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-#store #search .form .form-control a {
-    height: 48px;
-    width: auto;
-}
-
-#store #search .form .form-control .btn-search {
-    height: 100%;
-    padding: 8px 12px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-#store #search .form .form-control .btn-search img{
-    width: auto;
-    height: 100%;
-}
-
-
-/* Media Query - Store - Search */
-@media screen and (768px >= width >= 320px) {
-    #store #search .form {
-        width: 100%;
-    }
-}
-
-
-/* Store - Paquete de inicio y Productos */
 #store .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
-    grid-auto-columns: max-content;
-    gap: 24px;
-    row-gap: 36px;
-}
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: 24px;
+  gap: 24px;
+  row-gap: 36px;
+  grid-auto-columns: max-content; }
 
 #store .title {
-    margin-bottom: 1.5rem;
-}
+  margin-bottom: 1.5rem; }
 
-#store #initial-pack,
-#store #products {
-    padding: 2.25rem 0;
-}
+#store #initial-pack, #store #products {
+  padding: 2.25rem 0; }
 
-
-/* Store - badget */
 #store .badget {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 2em;
-    flex-wrap: wrap;
-}
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 2em; }
 
 #store .filter-sort {
-    display: none;
-}
+  display: none; }
 
+#consults .banner {
+  background-image: url("../assets/img/consultas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: top;
+  background-position-y: 50%;
+  height: 200px;
+  color: #FFFFFF;
+  width: 100%; }
+  #consults .banner .flex {
+    display: flex;
+    align-items: flex-end; }
+    #consults .banner .flex h1 {
+      margin-bottom: 1rem; }
 
-/* Media Query - Store - badget */
-@media screen and (768px >= width) {
-    #store .badget .btn-badget {
-        padding: .5em 1.7em;
-    }
-}
+#consults #consult-content {
+  padding-top: 6em;
+  padding-bottom: 6em; }
+  #consults #consult-content.flex {
+    display: flex;
+    gap: 24px; }
 
-@media screen and (576px >= width >= 320px) {
-    #store .badget {
-        display: none;
-    }
+#consults .info, #consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #consults img, #consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #consults .product {
+  width: 50%; }
+  #consults .info p, #consults #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #consults img p, #consults #dnd-academy .initial-product .product p, #dnd-academy .initial-product #consults .product p {
+    font-size: 24px;
+    margin-bottom: 1.5rem; }
+  #consults .info span, #consults #dnd-academy #section-what-is-dnd .content img span, #dnd-academy #section-what-is-dnd .content #consults img span, #consults #dnd-academy .initial-product .product span, #dnd-academy .initial-product #consults .product span {
+    font-size: 36px; }
 
-    #store .filter-sort {
-        display: block;
-        margin-bottom: 3em;
-    }
+#consults .form {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 12px));
+  column-gap: 24px;
+  grid-auto-columns: max-content; }
+  #consults .form .col-all {
+    grid-column: 1 / -1; }
+  #consults .form p {
+    font-size: 12px;
+    margin-bottom: 1.5rem; }
 
-    #store .filter-sort .tabs {
-        display: flex;
-        width: 100%;
-        justify-content: center;
+.footer {
+  height: 70px;
+  background-color: #232226; }
+  .footer .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    height: 100%;
+    width: 100%; }
+    .footer .social-media a, .footer .social-media a::selection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      background-color: #333333;
+      border-radius: 50px; }
+    .footer .social-media img {
+      width: 24px;
+      height: 24px; }
+
+@media screen and (max-width: 1024px) {
+  #home .banner title, #home .banner .content {
+    width: 80%; }
+  #home .dnd-academy img {
+    width: 45%; }
+  #dnd-academy .initial-product .product img {
+    width: 70%; } }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px; }
+  h2 {
+    font-size: 20px; }
+  main {
+    min-height: calc(100vh - 140px); }
+  .header .logo {
+    justify-content: space-between;
+    padding: 0 1rem; }
+    .header .logo picture img {
+      width: 80%; }
+    .header .logo #menu-hamb {
+      display: block;
+      background: none;
+      border: none; }
+      .header .logo #menu-hamb img {
+        width: 40px;
+        height: 40px; }
+  .header .menu {
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0s, opacity 0.5s, height 1s linear; }
+    .header .menu.open {
+      visibility: visible;
+      opacity: 1;
+      height: auto; }
+      .header .menu.open .menuNav {
+        flex-direction: column;
         align-items: center;
-    }
+        width: 100%; }
+        .header .menu.open .menuNav li {
+          flex-direction: column;
+          width: 100%;
+          text-align: center; }
+          .header .menu.open .menuNav li a, .header .menu.open .menuNav li a::selection, .header .menu.open .menuNav li span {
+            padding: 1.5em !important; }
+          .header .menu.open .menuNav li:hover {
+            background-color: #780A0D;
+            cursor: pointer; }
+            .header .menu.open .menuNav li:hover .menu-vertical li a, .header .menu.open .menuNav li:hover .menu-vertical li a::selection {
+              border: 0; }
+            .header .menu.open .menuNav li:hover .menu-vertical:hover {
+              border-bottom: 3px solid #780A0D;
+              width: 100%; }
+          .header .menu.open .menuNav li[data-type='menuSub']:hover {
+            padding-left: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+            border: 0; }
+          .header .menu.open .menuNav li .menu-vertical {
+            position: initial;
+            display: none;
+            background-color: #333333; }
+          .header .menu.open .menuNav li.open .menu-vertical {
+            display: block; }
+  #home .banner {
+    text-align: center;
+    height: auto;
+    padding: 3em 0; }
+    #home .banner .title {
+      width: 100%;
+      font-size: 36px; }
+    #home .banner .content {
+      font-size: 16px;
+      font-weight: 700;
+      width: 100%; }
+  #home .dnd-academy {
+    padding: 3em 0; }
+    #home .dnd-academy img {
+      width: 45%; }
+    #home .dnd-academy p {
+      margin-top: .5rem;
+      margin-bottom: 1.375rem; }
+  #home .tools .tools-options {
+    flex-direction: column;
+    height: auto;
+    background-color: #232226; }
+  #home .tools .slide {
+    width: 100%;
+    height: 150px;
+    transition: height 100ms linear; }
+    #home .tools .slide.hiddenToggle, #home .tools .slide.hiddenToggle img {
+      height: 0;
+      width: 0; }
+    #home .tools .slide.hiddenToggle .info, #home .tools .slide.hiddenToggle #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide.hiddenToggle img, #home .tools .slide.hiddenToggle #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide.hiddenToggle .product, #home .tools .slide.hiddenToggle .toggle-arrow {
+      display: none; }
+    #home .tools .slide > img {
+      display: none; }
+    #home .tools .slide#tools-player, #home .tools .slide#tools-dungeon-master, #home .tools .slide#tools-rules {
+      background-size: cover;
+      background-position-x: center; }
+    #home .tools .slide .info, #home .tools .slide #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide img, #home .tools .slide #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide .product {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-direction: column;
+      color: #FFFFFF;
+      width: 100%;
+      padding-right: 0; }
+      #home .tools .slide .info .toolTitle ~ p, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle ~ p, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle ~ p, #home .tools .slide #dnd-academy .initial-product .product .toolTitle ~ p, #dnd-academy .initial-product #home .tools .slide .product .toolTitle ~ p, #home .tools .slide .info .toolTitle ~ a, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle ~ a, #home .tools .slide #dnd-academy .initial-product .product .toolTitle ~ a, #dnd-academy .initial-product #home .tools .slide .product .toolTitle ~ a, #home .tools .slide .info .toolTitle ~ a::selection, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a::selection, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle ~ a::selection, #home .tools .slide #dnd-academy .initial-product .product .toolTitle ~ a::selection, #dnd-academy .initial-product #home .tools .slide .product .toolTitle ~ a::selection {
+        display: none; }
+    #home .tools .slide .toggle-arrow {
+      width: 20%;
+      height: auto;
+      display: flex;
+      justify-content: center; }
+      #home .tools .slide .toggle-arrow img {
+        width: auto;
+        height: 100%;
+        transition: transform 100ms linear; }
+    #home .tools .slide.opened {
+      height: auto; }
+      #home .tools .slide.opened .toggle-arrow img {
+        transform: rotate(90deg); }
+      #home .tools .slide.opened .info, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img, #home .tools .slide.opened #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide.opened .product {
+        padding-top: 2rem;
+        padding-bottom: 2rem; }
+        #home .tools .slide.opened .info .toolTitle ~ p, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img .toolTitle ~ p, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img .toolTitle ~ p, #home .tools .slide.opened #dnd-academy .initial-product .product .toolTitle ~ p, #dnd-academy .initial-product #home .tools .slide.opened .product .toolTitle ~ p, #home .tools .slide.opened .info .toolTitle ~ a, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img .toolTitle ~ a, #home .tools .slide.opened #dnd-academy .initial-product .product .toolTitle ~ a, #dnd-academy .initial-product #home .tools .slide.opened .product .toolTitle ~ a, #home .tools .slide.opened .info .toolTitle ~ a::selection, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a::selection, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img .toolTitle ~ a::selection, #home .tools .slide.opened #dnd-academy .initial-product .product .toolTitle ~ a::selection, #dnd-academy .initial-product #home .tools .slide.opened .product .toolTitle ~ a::selection {
+          display: block; }
+  #home .consults {
+    height: auto;
+    padding-top: 32px;
+    padding-bottom: 32px; }
+    #home .consults .info, #home .consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .consults img, #home .consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .consults .product, #home .consults .form {
+      width: 50%; }
+  #dnd-academy p {
+    align-self: flex-start; }
+  #dnd-academy #section-what-is-dnd .content {
+    flex-direction: column; }
+    #dnd-academy #section-what-is-dnd .content .info, #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product .product, #dnd-academy .initial-product #section-what-is-dnd .content .product, #dnd-academy #section-what-is-dnd .content img {
+      width: 100%; }
+  #store #search .form {
+    width: 100%; }
+  #store .badget .btn-badget {
+    padding: .5em 1.7em; }
+  #consults #consult-content {
+    padding-top: 3em;
+    padding-bottom: 3em; }
+    #consults #consult-content.flex {
+      display: flex;
+      gap: 32px;
+      flex-direction: column; }
+  #consults .info, #consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #consults img, #consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #consults .product, #consults .form {
+    width: 100%; }
+  #consults .info p, #consults #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #consults img p, #consults #dnd-academy .initial-product .product p, #dnd-academy .initial-product #consults .product p {
+    font-size: 20px;
+    margin-bottom: 2rem; }
+  #consults .info span, #consults #dnd-academy #section-what-is-dnd .content img span, #dnd-academy #section-what-is-dnd .content #consults img span, #consults #dnd-academy .initial-product .product span, #dnd-academy .initial-product #consults .product span {
+    font-size: 28px; }
+  #consults .form {
+    grid-template-columns: 100%; }
+    #consults .form .col-all {
+      grid-column: initial; }
+    #consults .form p {
+      font-size: 8px;
+      margin-bottom: 1.5rem; }
+    #consults .form .form-control {
+      display: flex;
+      justify-content: center; }
+    #consults .form input[type='submit'], #consults .form .form-control select[type='submit'], #consults .form .form-control textarea[type='submit'] {
+      width: 100%; } }
 
-    #store .filter-sort .tabs .btn-tab {
+@media screen and (max-width: 664px) {
+  #dnd-academy .initial-product {
+    width: 100%;
+    height: auto;
+    text-align: center; }
+    #dnd-academy .initial-product .flex {
+      flex-direction: column-reverse;
+      padding-top: 2rem;
+      padding-bottom: 2rem; }
+    #dnd-academy .initial-product .info, #dnd-academy .initial-product #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product img, #dnd-academy .initial-product .product, #dnd-academy .initial-product .product {
+      width: 100%; }
+    #dnd-academy .initial-product .info p, #dnd-academy .initial-product #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content .initial-product img p, #dnd-academy .initial-product .product p {
+      margin-bottom: 0px; }
+    #dnd-academy .initial-product .info button, #dnd-academy .initial-product #section-what-is-dnd .content img button, #dnd-academy #section-what-is-dnd .content .initial-product img button, #dnd-academy .initial-product .product button {
+      margin-top: 1.5rem; }
+    #dnd-academy .initial-product .product {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 32px; }
+  h2 {
+    font-size: 16px; }
+  main {
+    min-height: calc(100vh - 198px); }
+  #home .banner {
+    text-align: center;
+    height: auto;
+    padding: 3em 0; }
+    #home .banner .title {
+      width: 100%;
+      font-size: 32px; }
+    #home .banner .content {
+      font-size: 14px;
+      font-weight: 700;
+      width: 100%; }
+  #home .dnd-academy {
+    padding: 3em 0; }
+    #home .dnd-academy .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-direction: column; }
+    #home .dnd-academy .content {
+      text-align: center;
+      width: 100%; }
+    #home .dnd-academy img {
+      width: 100%; }
+  #home .store .title .slider-btns {
+    display: none; }
+  #home .consults .flex {
+    flex-direction: column; }
+  #home .consults .info, #home .consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .consults img, #home .consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .consults .product, #home .consults .form {
+    width: 100% !important;
+    text-align: center; }
+  #dnd-academy .banner {
+    background-size: cover; }
+  #dnd-academy .options {
+    flex-wrap: wrap;
+    padding-left: 16px;
+    padding-right: 16px; }
+  #dnd-academy #section-how-play-dnd .info iframe, #dnd-academy #section-how-create-character .info iframe, #dnd-academy #section-resource .info iframe, #dnd-academy #section-how-play-dnd #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-how-play-dnd img iframe, #dnd-academy #section-how-create-character #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-how-create-character img iframe, #dnd-academy #section-resource #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-resource img iframe, #dnd-academy #section-how-play-dnd .initial-product .product iframe, #dnd-academy .initial-product #section-how-play-dnd .product iframe, #dnd-academy #section-how-create-character .initial-product .product iframe, #dnd-academy .initial-product #section-how-create-character .product iframe, #dnd-academy #section-resource .initial-product .product iframe, #dnd-academy .initial-product #section-resource .product iframe, #dnd-academy #section-how-create-character .info iframe, #dnd-academy #section-how-create-character #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-how-create-character img iframe, #dnd-academy #section-how-create-character .initial-product .product iframe, #dnd-academy .initial-product #section-how-create-character .product iframe {
+    width: 100%; }
+  #dnd-academy #section-resource .btn-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; }
+    #dnd-academy #section-resource .btn-download span {
+      display: none; }
+  #tools .banner {
+    background-size: cover; }
+  #tools .tools-list .tools-grid .col-12 + .col-12 {
+    margin-top: 1.5rem; }
+  #store .banner {
+    background-size: cover; }
+  #store .badget {
+    display: none; }
+  #store .filter-sort {
+    display: block;
+    margin-bottom: 3em; }
+    #store .filter-sort .tabs {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #store .filter-sort .tabs .btn-tab {
         width: 100%;
         padding: 1em;
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
-
-    #store .filter-sort .tabs .btn-tab img {
-        height: 20px;
-        width: auto;
-    }
-
-    #store .filter-sort .tabs .filter {
-        background-color: var(--color-red);
+        align-items: center; }
+        #store .filter-sort .tabs .btn-tab img {
+          height: 20px;
+          width: auto; }
+      #store .filter-sort .tabs .filter {
+        background-color: #9E0B0F;
         border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-
-    #store .filter-sort .tabs .filter.active {
-        background-color: var(--color-red-dark);
-        border-bottom-left-radius: 0px;
-    }
-
-    #store .filter-sort .tabs .filter.active + .sort {
-        border-bottom-right-radius: 0px;
-    }
-
-    #store .filter-sort .tabs .sort {
+        border-bottom-right-radius: 0px; }
+        #store .filter-sort .tabs .filter.active {
+          background-color: #780A0D;
+          border-bottom-left-radius: 0px; }
+          #store .filter-sort .tabs .filter.active + .sort {
+            border-bottom-right-radius: 0px; }
+      #store .filter-sort .tabs .sort {
         border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-    }
-
+        border-bottom-left-radius: 0px; }
     #store .filter-sort .menu-filter {
-        width: 100%;
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        transition: visibility 0s, opacity 0.5s, height 1s linear;
-    }
-
-    #store .filter-sort .menu-filter.open {
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transition: visibility 0s, opacity 0.5s, height 1s linear; }
+      #store .filter-sort .menu-filter.open {
         visibility: visible;
         opacity: 1;
-        height: auto;
-    }
-
-    #store .filter-sort .menu-filter ul{
+        height: auto; }
+      #store .filter-sort .menu-filter ul {
         padding: 1em 0;
-        background-color: var(--color-blue-gray);
+        background-color: #232226;
         border-bottom-right-radius: 8px;
-        border-bottom-left-radius: 8px;
-    }
-
-    #store .filter-sort .menu-filter ul li{
-        list-style: none;
-    }
-
-    #store .filter-sort .menu-filter ul li button{
-        list-style: none;
-        padding: 1em;
-        width: 100%;
-        background: none;
-        border: none;
-        color: var(--color-white);
-    }
-
-    #store .filter-sort .menu-filter ul li button.selected{
-        background-color: var(--color-blue-gray-light);
-    }
-}
-
-
-/* Consultas */
-/* Consultas - Banner */
-#consults .banner {
-    width: 100%;
-    height: 200px;
-    background-image: url('../assets/img/consultas.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 50%;
-}
-
-#consults .banner h1{
-    margin-bottom: 1rem;
-}
-
-#consults .banner .flex {
-    display: flex;
-    align-items: flex-end;
-    color: var(--color-white);
-}
-
-
-/* Media Query - Consultas - Banner */
-@media screen and (576px >= width >= 320px) {
-    #consults .banner {
-        background-size: cover;
-    }
-
+        border-bottom-left-radius: 8px; }
+        #store .filter-sort .menu-filter ul li {
+          list-style: none; }
+          #store .filter-sort .menu-filter ul li button {
+            list-style: none;
+            padding: 1em;
+            width: 100%;
+            background: none;
+            border: none;
+            color: #FFFFFF; }
+            #store .filter-sort .menu-filter ul li button.selected {
+              background-color: #333333; }
+  #consults .banner {
+    background-size: cover; }
     #consults .banner .flex {
-        align-items: flex-end;
-        justify-content: flex-start;
-    }
-}
-
-
-/* Consultas - Contenido */
-#consults #consult-content {
-    padding-top: 6em;
-    padding-bottom: 6em;
-}
-
-#consults #consult-content.dnd-container.flex {
-    display: flex;
-    gap: 24px;
-}
-
-#consults .info, #consults .form {
-    width: 50%;
-}
-
-
-/* Media Query - Consultas - Contenido */
-@media screen and (768px >= width >= 320px) {
-    #consults #consult-content {
-        padding-top: 3em;
-        padding-bottom: 3em;
-    }
-
-    #consults #consult-content.dnd-container.flex {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    #consults .info, #consults .form {
-        width: 100%;
-    }
-}
-
-
-/* Consultas - Info */
-#consults .info p {
-    font-size: var(--md-sub-title);
-    margin-bottom: 1.5rem;
-}
-
-#consults .info span{
-    font-size: var(--md-middle-title);
-}
-
-
-/* Media Query - Consultas - Info */
-@media screen and (768px >= width) {
-    #consults .info p {
-        font-size: var(--sm-sub-title);
-        margin-bottom: 2rem;
-    }
-
-    #consults .info span{
-        font-size: var(--sm-middle-title);
-    }
-}
-
-@media screen and (576px >= width >= 320px) {
-    #consults .info p {
-        font-size: var(--xs-sub-title);
-        margin-bottom: 2rem;
-    }
-
-    #consults .info span{
-        font-size: var(--xs-middle-title);
-    }
-}
-
-
-/* Consultas - Formulario */
-#consults .form {
-    display: grid;
-    grid-template-columns: repeat(2, calc(50% - 12px));
-    column-gap: 24px;
-}
-
-#consults .form .col-all {
-    grid-column: 1 / -1;
-}
-
-#consults .form p {
-    font-size: var(--md-small-text);
-    margin-bottom: 1.5rem;
-}
-
-#consults .form .btns-form {
-    display: flex;
-    justify-content: flex;
-}
-
-
-/* Media Query - Consultas - Formularios */
-@media screen and (768px >= width) {
-    #consults .form .btns-form {
-        display: flex;
-        justify-content: center;
-    }
-
-    #consults .form p {
-        font-size: var(--sm-small-text);
-        margin-bottom: 2rem;
-    }
-
-    #consults .form input[type='submit'] {
-        width: 20em;
-    }
-}
-
-@media screen and (576px >= width >= 320px) {
-    #consults .form {
-        grid-template-columns: 100%;
-    }
-
+      align-items: flex-end;
+      justify-content: flex-start; }
+  #consults .info p, #consults #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #consults img p, #consults #dnd-academy .initial-product .product p, #dnd-academy .initial-product #consults .product p {
+    font-size: 16px;
+    margin-bottom: 2rem; }
+  #consults .info span, #consults #dnd-academy #section-what-is-dnd .content img span, #dnd-academy #section-what-is-dnd .content #consults img span, #consults #dnd-academy .initial-product .product span, #dnd-academy .initial-product #consults .product span {
+    font-size: 24px; }
+  #consults .form {
+    grid-template-columns: 100%; }
     #consults .form .col-all {
-        grid-column: initial;
-    }
-
+      grid-column: initial; }
     #consults .form p {
-        font-size: var(--sm-small-text);
-        margin-bottom: 1.5rem;
-    }
-
+      font-size: 8px;
+      margin-bottom: 1.5rem; }
     #consults .form .file-control {
-        margin-bottom: 1rem;
-    }
-
+      margin-bottom: 1rem; }
     #consults .form .btns-form {
-        display: flex;
-        justify-content: center;
-    }
-
-    #consults .form input[type='submit'] {
-        width: 100%;
-    }
-}
-
-
-/* Footer */
-.footer {
-    height: 70px;
-    background-color: var(--color-blue-gray);
-}
-
-.footer .social-media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 24px;
-}
-
-.footer .social-media a {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-blue-gray-light);
-    border-radius: 50px;
-}
-
-.footer .social-media img {
-    width: 24px;
-    height: 24px;
-}
-
-
-/* Media Query - Footer */
-@media screen and (576px >= width >= 320px) {
-    .footer {
-        height: auto;
-    }
-
+      display: flex;
+      justify-content: center; }
+    #consults .form input[type='submit'], #consults .form .form-control select[type='submit'], #consults .form .form-control textarea[type='submit'] {
+      width: 100%; }
+  .footer {
+    height: auto;
+    padding: 1rem 3.25rem; }
     .footer .social-media {
-        flex-wrap: wrap; 
-    }
-
-    .footer .social-media a {
+      flex-wrap: wrap; }
+      .footer .social-media a, .footer .social-media a::selection {
         width: 36px;
-        height: 36px;
-    }
-    
-    .footer .social-media img {
+        height: 36px; }
+      .footer .social-media img {
         width: 20px;
-        height: 20px;
-    }
-}
-
-@media screen and (425px >= width) {
-    .footer {
-        padding: 1rem 3.25rem;
-    }
-}
+        height: 20px; } }

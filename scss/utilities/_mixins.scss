@@ -1,0 +1,84 @@
+// Mixin Flex-box
+@mixin flex(
+        $justify-content: null, 
+        $align-items: null,
+        $gap : null,
+        $flex-direction: null,
+        $flex-wrap: null) {
+    display: flex;
+    @if $justify-content != null {
+        justify-content: $justify-content;
+    }
+    @if $align-items != null {
+        align-items: $align-items;
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+    @if $flex-direction != null {
+        flex-direction: $flex-direction;
+    }
+    @if $flex-wrap != null {
+        flex-wrap: $flex-wrap;
+    }
+};
+
+
+// Mixin Grid
+@mixin grid(
+    $repeat: null,
+    $width-columns: null,
+    $gap: null,
+    $row-gap: null,
+    $column-gap: null,
+) {
+    display: grid;
+    @if $repeat != null && $width-columns != null {
+        grid-template-columns: repeat($repeat, $width-columns);
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+    @if $row-gap != null {
+        row-gap: $row-gap;
+    }
+    @if $column-gap != null {
+        column-gap: $column-gap;
+    }
+    grid-auto-columns: max-content;
+}
+
+
+// Mixin Banner
+@mixin banner($url, $size, $positionX, $positionY, $height: null) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-position-x: $positionX;
+    background-position-y: $positionY;
+    @if height != null {
+        height: $height;
+    }
+    color: map-get($color, 'white');
+};
+
+
+@mixin banner_small($url, $size, $positionY, $height: auto) {
+    @include banner($url, $size, top, $positionY, $height);
+    width: 100%;
+    .flex {
+        @include flex($align-items: flex-end);
+        h1 {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+// Mixin Tools
+@mixin toolCard($url) {
+    @include banner($url, cover, top, 40%);
+}

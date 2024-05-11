@@ -1,0 +1,155 @@
+// Home
+#home {
+    .banner {
+        @include banner('../assets/img/home_banner.png', cover, center, center, 500px);
+        .flex {
+            @include flex(center, $gap: 40px, $flex-direction: column);
+        }
+        .title {
+            width: 45%;
+        }
+        .content {
+            font-size: 18px;
+            font-weight: map-get($font-weight, 'bold');
+            width: 45%;
+        }
+    }
+
+    .dnd-academy {
+        padding: 4rem 0;
+        .flex {
+            @include flex($align-items: center, $justify-content: center, $gap: 24px);
+        }
+        .content {
+            width: 45%;
+            P {
+                margin-top: 1rem;
+                margin-bottom: 2.25rem;
+            }
+        }
+    }
+
+    .tools {
+        .title {
+            color: map-get($color, 'white');
+            background-color: map-get($color, 'blue-gray');
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .tools-options {
+            width: 100%;
+            height: 24em;
+            display: flex;
+        }
+        .slide {
+            width: calc(100vw / 3);
+            height: auto;
+            @include flex($align-items: center, $justify-content: center);
+            transition: width 250ms linear;
+            cursor: pointer;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            &.hiddenToggle {
+                width: 0;
+                img {
+                    display: none
+                }
+            }
+            &#tools-player {
+                @include banner('../assets/img/herramientas_jugador.png', 100vw, left, center);
+            }
+            &#tools-dungeon-master {
+                @include banner('../assets/img/herramientas_dungeon_master.png', 100vw, center, center);
+            }
+            &#tools-rules {
+                @include banner('../assets/img/herramientas_reglas.png', 100vw, right, center);
+            }
+            .info{
+                display: none;
+                .toolTitle {
+                    @include flex($justify-content: space-between, $align-items: center, $gap: 24px);
+                    .toolTitle-content {
+                        @include flex($align-items: center, $gap: 24px);
+                        img {
+                            width: 36px;
+                            height: 36px;
+                        }
+                    }
+                }
+                p {
+                    width: 60vw;
+                    font-weight: map-get($font-weight, 'semibold');
+                }
+            }
+            &.opened {
+                width: 100vw;
+                .info {
+                    @include flex(center, $flex-direction: column, $gap: 24px);
+                    color: map-get($color, 'white');
+                    width: 100%;
+                }
+                > img {
+                    display: none;
+                }
+            }
+            .toggle-arrow {
+                display: none;
+            }
+        }
+    }
+
+    .store {
+        position: relative;
+        min-height: 480px;
+        .store-content {
+            padding-top: 2em;
+            padding-bottom: 2em;
+            .swiper {
+                width: 100%;
+                height: 100%;
+                .title {
+                    @include flex($justify-content: space-between, $align-items: center);
+                    height: 6.25rem;
+                    .slider-btns {
+                        @include flex($gap: 12px);
+                        .slide-btn {
+                            width: 40px;
+                            height: 40px;
+                            @include flex($justify-content: center, $align-items: center);
+                            cursor: pointer;
+                            &.btn-prev {
+                                border: 1px solid map-get($color, 'red');
+                            }
+                            &.btn-next {
+                                background-color: map-get($color, 'red');
+                            }
+                        }
+                    }
+                }
+            }
+            .store-btn {
+                @include flex($justify-content: center, $align-items: center);
+                height: 140px;
+            }
+        }
+        
+    }
+
+    .consults {
+        @include banner('../assets/img/consultas.png', cover, center, center, 34.375rem);
+        .flex {
+            @include flex($justify-content: center, $align-items: center, $gap: 24px);
+            .info {
+                width: 55%;
+                h2 {
+                    margin-bottom: 2.25rem;
+                }
+            }
+            .form {
+                width: 35%;
+            }
+        }
+    }
+}

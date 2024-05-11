@@ -1,0 +1,237 @@
+// Media Query: 576px
+@media screen and (max-width: 576px) {
+    // General
+    h1 {
+        font-size: map-get($title-size, 'xs');
+    }
+    
+    h2 {
+        font-size: map-get($sub-title-size, 'xs');
+    }
+
+    main {
+        min-height: calc(100vh - 198px);
+    }
+
+    // Home
+    #home {
+        .banner {
+            text-align: center;
+            height: auto;
+            padding: 3em 0;
+            .title {
+                width: 100%;
+                font-size: map-get($title-size, 'xs');
+            }
+            .content {
+                font-size: 14px;
+                font-weight: map-get($font-weight, 'bold');
+                width: 100%;
+            }
+        }
+        .dnd-academy {
+            padding: 3em 0;
+            .flex {
+                @include flex($align-items: center, $flex-direction: column, $gap: 16px);
+            }
+            .content {
+                text-align: center;
+                width: 100%;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .store {
+            .title {
+                .slider-btns {
+                    display: none
+                }
+            }
+        }
+        .consults {
+            .flex {
+                flex-direction: column;
+            }
+            .info, .form {
+                width: 100% !important;
+                text-align: center;
+            }
+        }
+    }
+
+    // Academia DnD
+    #dnd-academy {
+        .banner {
+            background-size: cover;
+        }
+        .options {
+            flex-wrap: wrap;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        #section-how-play-dnd, #section-how-create-character {
+            .info {
+                iframe {
+                    width: 100%;
+                }
+            }
+        }
+        #section-resource {
+            .btn-download {
+                @include flex(center, center);
+                width: auto;
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Herramientas
+    #tools {
+        .banner {
+            background-size: cover;
+        }
+        .tools-list {
+            .tools-grid {
+                .col-12 {
+                    + .col-12 {
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // Tienda
+    #store {
+        .banner {
+            background-size: cover;
+        }
+        .badget {
+            display: none;
+        }
+        .filter-sort {
+            display: block;
+            margin-bottom: 3em;
+            .tabs {
+                width: 100%;
+                @include flex(center, center);
+                .btn-tab {
+                    width: 100%;
+                    padding: 1em;
+                    @include flex(center, center);
+                    img {
+                        height: 20px;
+                        width: auto;
+                    }
+                }
+                .filter {
+                    background-color: map-get($color, 'red');
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    &.active {
+                        background-color: map-get($color, 'red-dark');
+                        border-bottom-left-radius: 0px;
+                        + .sort {
+                            border-bottom-right-radius: 0px;
+                        }
+                    }
+                }
+                .sort {
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+            }
+            .menu-filter {
+                width: 100%;
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                transition: visibility 0s, opacity 0.5s, height 1s linear;
+                &.open {
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                }
+                ul {
+                    padding: 1em 0;
+                    background-color: map-get($color, 'blue-gray');
+                    border-bottom-right-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                    li{
+                        list-style: none;
+                        button{
+                            list-style: none;
+                            padding: 1em;
+                            width: 100%;
+                            background: none;
+                            border: none;
+                            color: map-get($color, 'white');
+                            &.selected{
+                                background-color: map-get($color, 'blue-gray-light');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Consultas
+    #consults {
+        .banner {
+            background-size: cover;
+            .flex {
+                align-items: flex-end;
+                justify-content: flex-start;
+            }
+        }
+        .info {
+            p {
+                font-size: map-get($sub-title-size, 'xs');
+                margin-bottom: 2rem;
+            }
+            span{
+                font-size: map-get($middle-title-size, 'xs');
+            }
+        }
+        .form {
+            grid-template-columns: 100%;
+            .col-all {
+                grid-column: initial;
+            }
+            p {
+                font-size: map-get($small-text-size, 'xs');
+                margin-bottom: 1.5rem;
+            }
+            .file-control {
+                margin-bottom: 1rem;
+            }
+            .btns-form {
+                @include flex(center);
+            }
+            input[type='submit'] {
+                width: 100%;
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        height: auto;
+        padding: 1rem 3.25rem;
+        .social-media {
+            flex-wrap: wrap; 
+            a {
+                width: 36px;
+                height: 36px;
+            }
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

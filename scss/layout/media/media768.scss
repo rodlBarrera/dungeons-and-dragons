@@ -1,0 +1,264 @@
+// Media Query: 768px
+@media screen and (max-width: 768px) {
+    // General
+    h1 {
+        font-size: map-get($title-size, 'sm');
+    }
+    
+    h2 {
+        font-size: map-get($sub-title-size, 'sm');
+    }
+
+    main {
+        min-height: calc(100vh - 140px);
+    }
+
+    // Header
+    .header {
+        .logo {
+            justify-content: space-between;
+            padding: 0 1rem;
+            picture {
+                img {
+                    width: 80%;
+                }
+            }
+            #menu-hamb {
+                display: block;
+                background: none;
+                border: none;
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        .menu {
+            width: 100%;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            transition: visibility 0s, opacity 0.5s, height 1s linear;
+            &.open {
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+                .menuNav {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    li {
+                        flex-direction: column;
+                        width: 100%;
+                        text-align: center;
+                        a, span {
+                            padding: 1.5em !important;
+                        }
+                        &:hover {
+                            background-color: map-get($color, 'red-dark');
+                            cursor: pointer;
+                            .menu-vertical {
+                                li {
+                                    a {
+                                        border: 0;
+                                    }
+                                }
+                                &:hover {
+                                    border-bottom: 3px solid map-get($color, 'red-dark');
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        &[data-type='menuSub']:hover {
+                            padding-left: 0;
+                            padding-bottom: 0;
+                            padding-right: 0;
+                            border: 0;
+                        }
+                        .menu-vertical {
+                            position: initial;
+                            display: none;
+                            background-color: map-get($color, 'blue-gray-light');
+                        }
+                        &.open {
+                            .menu-vertical {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    // Home
+    #home {
+        .banner {
+            text-align: center;
+            height: auto;
+            padding: 3em 0;
+            .title {
+                width: 100%;
+                font-size: map-get($title-size, 'sm');
+            }
+            .content {
+                font-size: 16px;
+                font-weight: map-get($font-weight, 'bold');
+                width: 100%;
+            }
+        }
+        .dnd-academy {
+            padding: 3em 0;
+            img {
+                width: 45%;
+            }
+            p {
+                margin-top: .5rem;
+                margin-bottom: 1.375rem;
+            }
+        }
+        .tools{
+            .tools-options {
+                flex-direction: column;
+                height: auto;
+                background-color: map-get($color, 'blue-gray');
+            }
+            .slide {
+                width: 100%;
+                height: 150px;
+                transition: height 100ms linear;
+                &.hiddenToggle, &.hiddenToggle img {
+                    height: 0;
+                    width: 0;
+                }
+                &.hiddenToggle {
+                    .info, .toggle-arrow {
+                        display: none;
+                    }
+                }
+                > img {
+                    display: none;
+                }
+                &#tools-player, &#tools-dungeon-master, &#tools-rules {
+                    background-size: cover;
+                    background-position-x: center;
+                }
+                .info {
+                    @include flex(center, $gap: 24px, $flex-direction: column);
+                    color: map-get($color, 'white');
+                    width: 100%;
+                    padding-right: 0;
+                    .toolTitle {
+                        ~ p, ~ a {
+                            display: none;
+                        } 
+                    }
+                }
+                .toggle-arrow {
+                    width: 20%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: auto;
+                        height: 100%;
+                        transition: transform 100ms linear
+                    }
+                }
+                &.opened {
+                    height: auto;
+                    .toggle-arrow {
+                        img {
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .info {
+                        padding-top: 2rem;
+                        padding-bottom: 2rem;
+                        .toolTitle {
+                            ~ p, ~ a {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .consults {
+            height: auto;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            .info, .form {
+                width: 50%;
+            }
+        }
+    }
+
+    // Academia DnD
+    #dnd-academy {
+        p {
+            align-self: flex-start;
+        }
+        #section-what-is-dnd {
+            .content {
+                flex-direction: column;
+                .info, img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // Tienda
+    #store {
+        #search {
+            .form {
+                width: 100%;
+            }
+        }
+        .badget {
+            .btn-badget {
+                padding: .5em 1.7em;
+            }
+        }
+    }
+
+    // Consultas
+    #consults {
+        #consult-content {
+            padding-top: 3em;
+            padding-bottom: 3em;
+            &.flex {
+                @include flex($gap: 32px, $flex-direction: column);
+            }
+        }
+        .info, .form {
+            width: 100%;
+        }
+        .info {
+            p {
+                font-size: map-get($sub-title-size, 'sm');
+                margin-bottom: 2rem;
+            }
+            span {
+                font-size: map-get($middle-title-size, 'sm');
+            }
+        }
+        .form {
+            grid-template-columns: 100%;
+            .col-all {
+                grid-column: initial;
+            }
+            p {
+                font-size: map-get($small-text-size, 'sm');
+                margin-bottom: 1.5rem;
+            }
+            .form-control {
+                @include flex (center);
+            }
+            input[type='submit'] {
+                width: 100%;
+            }
+        }
+    }
+}
