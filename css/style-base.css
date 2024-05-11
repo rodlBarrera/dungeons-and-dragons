@@ -831,7 +831,7 @@ a, a:hover, a::selection {
 
 
 /* Home - Consultas */
-#home .queries {
+#home .consults {
     height: 34.375rem;
     background-image: url('../assets/img/consultas.png');
     background-size: cover;
@@ -840,29 +840,29 @@ a, a:hover, a::selection {
     color: var(--color-white);
 }
 
-#home .queries .flex {
+#home .consults .flex {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
 }
 
-#home .queries .info {
+#home .consults .info {
     width: 55%;
 }
 
-#home .queries .form {
+#home .consults .form {
     width: 35%;
 }
 
-#home .queries .info h2 {
+#home .consults .info h2 {
     margin-bottom: 2.25rem;
 }
 
 
 /* Media Query - Home - Consultas */
 @media screen and (768px >= width >= 320px) {
-    #home .queries {
+    #home .consults {
         height: auto;
         padding-top: 32px;
         padding-bottom: 32px;
@@ -870,18 +870,18 @@ a, a:hover, a::selection {
 }
 
 @media screen and (768px >= width) {
-    #home .queries .info, #home .queries .form {
+    #home .consults .info, #home .consults .form {
         width: 50%;
     }
 }
 
 
 @media screen and (576px >= width >= 320px) {
-    #home .queries .flex {
+    #home .consults .flex {
         flex-direction: column;
     }
 
-    #home .queries .info, #home .queries .form {
+    #home .consults .info, #home .consults .form {
         width: 100%;
         text-align: center;
     }
@@ -1766,7 +1766,7 @@ a, a:hover, a::selection {
     }
 }
 
-@media screen and (425px >= width) {
+@media screen and (576px >= width) {
     .footer {
         padding: 1rem 3.25rem;
     }
