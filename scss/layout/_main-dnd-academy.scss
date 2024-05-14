@@ -43,24 +43,17 @@
     #section-what-is-dnd {
         .content {
             @include flex($align-items: center, $gap: 24px);
-            .info {
+            .info, img {
                 width: 50%;
-            }
-            img {
-                @extend .info;
             }
         }
     }
-    #section-how-play-dnd {
+    #section-how-play-dnd, #section-how-create-character, #section-resource {
         .info {
             @include flex($align-items: center, $flex-direction: column);
         }
     }
-    #section-how-create-character {
-        @extend #section-how-play-dnd;
-    }
     #section-resource {
-        @extend #section-how-play-dnd;
         .btn-download {
             @include flex(space-between, center);
             width: 250px;
@@ -79,7 +72,7 @@
         .flex {
             @include flex(center, center, 1.5rem);
         }
-        .info {
+        .info, .product {
             width: 50%;
             p {
                 margin-bottom: 0px;
@@ -89,7 +82,6 @@
             }
         }
         .product {
-            @extend .info;
             @include flex(center, center);
             img {
                 width: 60%;
