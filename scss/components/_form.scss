@@ -15,7 +15,7 @@
                 }
             }
         }
-        input {
+        input, select, textarea {
             font-family: $font-family;
             min-height: 48px;
             padding: .75rem;
@@ -25,12 +25,6 @@
             &:focus-visible {
                 outline: none;
             }
-        }
-        select {
-            @extend input;
-        }
-        textarea {
-            @extend input;
         }
         &.file-control {
             @include flex($align-items: center, $flex-direction: row);

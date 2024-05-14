@@ -43,11 +43,8 @@
         margin-bottom: 1.5rem;
     }
 
-    #initial-pack {
+    #initial-pack, #products {
         padding: 2.25rem 0;
-    }
-    #products {
-        @extend #initial-pack;
     }
     .badget {
         @include flex($align-items: center, $flex-wrap: wrap, $gap: 8px);
