@@ -5,6 +5,7 @@
     }
     p {
         margin-bottom: 20px;
+        align-self: flex-start;
     }
     .academy-content {
         margin-bottom: 60px;
@@ -68,7 +69,7 @@
     }
     .initial-product {
         width: 100%;
-        @include banner('../assets/img/producto_inicial.png', cover, top, top, $height: 550px);
+        @include banner('../assets/img/producto_inicial.png', cover, initial, top, $height: 550px);
         .flex {
             @include flex(center, center, 1.5rem);
         }
@@ -83,8 +84,9 @@
         }
         .product {
             @include flex(center, center);
+            height: 100%;
             img {
-                width: 60%;
+                height: 100%;
             }
         }
     }
