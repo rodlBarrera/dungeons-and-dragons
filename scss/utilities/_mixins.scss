@@ -67,7 +67,7 @@
 
 
 @mixin banner_small($url, $size, $positionY, $height: auto) {
-    @include banner($url, $size, top, $positionY, $height);
+    @include banner($url, $size, initial, $positionY, $height);
     width: 100%;
     .flex {
         @include flex($align-items: flex-end);
@@ -80,5 +80,5 @@
 
 // Mixin Tools
 @mixin toolCard($url) {
-    @include banner($url, cover, top, 40%);
+    @include banner($url, cover, initial, 30%);
 }

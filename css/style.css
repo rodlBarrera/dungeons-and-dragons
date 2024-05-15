@@ -27,9 +27,12 @@ h2 {
 span {
   font-weight: 600; }
 
-a, a:hover, a::selection {
+a {
   text-decoration: none;
   color: #000000; }
+  a:hover, a::selection {
+    text-decoration: none;
+    color: #000000; }
 
 .dnd-container {
   padding: 0 10vw;
@@ -131,16 +134,16 @@ a, a:hover, a::selection {
       padding: .5rem;
       margin: 0;
       width: 40em; }
-    .form .form-control.file-control input[type="file"], .form .form-control.file-control select[type="file"], .form .form-control.file-control textarea[type="file"] {
+    .form .form-control.file-control input[type="file"] {
       border: none; }
-      .form .form-control.file-control input[type="file"]::file-selector-button, .form .form-control.file-control select[type="file"]::file-selector-button, .form .form-control.file-control textarea[type="file"]::file-selector-button {
+      .form .form-control.file-control input[type="file"]::file-selector-button {
         display: none; }
-      .form .form-control.file-control input[type="file"] span, .form .form-control.file-control select[type="file"] span, .form .form-control.file-control textarea[type="file"] span {
+      .form .form-control.file-control input[type="file"] span {
         padding: 0 .2rem;
         font-weight: 400; }
-  .form .form-control input[type='submit'], .form .form-control select[type='submit'], .form .form-control textarea[type='submit'] {
+  .form .form-control input[type='submit'] {
     margin-top: 1rem; }
-    .form .form-control input[type='submit'] .flex, .form .form-control select[type='submit'] .flex, .form .form-control textarea[type='submit'] .flex {
+    .form .form-control input[type='submit'] .flex {
       display: flex;
       gap: 8px; }
 
@@ -174,7 +177,7 @@ a, a:hover, a::selection {
         display: block;
         list-style: none;
         font-size: 12px; }
-        .header .menu .menuNav li a, .header .menu .menuNav li a::selection {
+        .header .menu .menuNav li a {
           padding: 8px 36px;
           color: #FFFFFF;
           font-weight: 400;
@@ -189,9 +192,9 @@ a, a:hover, a::selection {
         .header .menu .menuNav li:hover {
           border-bottom: 2px solid #780A0D;
           cursor: pointer; }
-          .header .menu .menuNav li:hover a, .header .menu .menuNav li:hover a::selection {
+          .header .menu .menuNav li:hover a {
             padding-bottom: 6px; }
-          .header .menu .menuNav li:hover ~ li a, .header .menu .menuNav li:hover ~ li a::selection {
+          .header .menu .menuNav li:hover ~ li a {
             padding-bottom: 6px; }
           .header .menu .menuNav li:hover .menu-vertical {
             display: block; }
@@ -199,7 +202,7 @@ a, a:hover, a::selection {
               background-color: #333333;
               border: none;
               width: 100%; }
-            .header .menu .menuNav li:hover .menu-vertical li a, .header .menu .menuNav li:hover .menu-vertical li a::selection {
+            .header .menu .menuNav li:hover .menu-vertical li a {
               border: 0;
               padding: 1.5em 3em; }
         .header .menu .menuNav li[data-type="menuSub"]:hover {
@@ -291,26 +294,26 @@ a, a:hover, a::selection {
     background-position-x: right;
     background-position-y: center;
     color: #FFFFFF; }
-  #home .tools .slide .info, #home .tools .slide #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide img, #home .tools .slide #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide .product {
+  #home .tools .slide .info {
     display: none; }
-    #home .tools .slide .info .toolTitle, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle, #home .tools .slide #dnd-academy .initial-product .product .toolTitle, #dnd-academy .initial-product #home .tools .slide .product .toolTitle {
+    #home .tools .slide .info .toolTitle {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 24px; }
-      #home .tools .slide .info .toolTitle .toolTitle-content, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle .toolTitle-content, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle .toolTitle-content, #home .tools .slide #dnd-academy .initial-product .product .toolTitle .toolTitle-content, #dnd-academy .initial-product #home .tools .slide .product .toolTitle .toolTitle-content {
+      #home .tools .slide .info .toolTitle .toolTitle-content {
         display: flex;
         align-items: center;
         gap: 24px; }
-        #home .tools .slide .info .toolTitle .toolTitle-content img, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle .toolTitle-content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle .toolTitle-content img, #home .tools .slide #dnd-academy .initial-product .product .toolTitle .toolTitle-content img, #dnd-academy .initial-product #home .tools .slide .product .toolTitle .toolTitle-content img {
+        #home .tools .slide .info .toolTitle .toolTitle-content img {
           width: 36px;
           height: 36px; }
-    #home .tools .slide .info p, #home .tools .slide #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #home .tools .slide img p, #home .tools .slide #dnd-academy .initial-product .product p, #dnd-academy .initial-product #home .tools .slide .product p {
+    #home .tools .slide .info p {
       width: 60vw;
       font-weight: 600; }
   #home .tools .slide.opened {
     width: 100vw; }
-    #home .tools .slide.opened .info, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img, #home .tools .slide.opened #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide.opened .product {
+    #home .tools .slide.opened .info {
       display: flex;
       justify-content: center;
       gap: 24px;
@@ -369,9 +372,9 @@ a, a:hover, a::selection {
     justify-content: center;
     align-items: center;
     gap: 24px; }
-    #home .consults .flex .info, #home .consults .flex #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .consults .flex img, #home .consults .flex #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .consults .flex .product {
+    #home .consults .flex .info {
       width: 55%; }
-      #home .consults .flex .info h2, #home .consults .flex #dnd-academy #section-what-is-dnd .content img h2, #dnd-academy #section-what-is-dnd .content #home .consults .flex img h2, #home .consults .flex #dnd-academy .initial-product .product h2, #dnd-academy .initial-product #home .consults .flex .product h2 {
+      #home .consults .flex .info h2 {
         margin-bottom: 2.25rem; }
     #home .consults .flex .form {
       width: 35%; }
@@ -380,7 +383,8 @@ a, a:hover, a::selection {
   margin-bottom: 36px; }
 
 #dnd-academy p {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  align-self: flex-start; }
 
 #dnd-academy .academy-content {
   margin-bottom: 60px; }
@@ -392,7 +396,7 @@ a, a:hover, a::selection {
   background-image: url("../assets/img/academia-dnd.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: top;
+  background-position-x: initial;
   background-position-y: 40%;
   height: 200px;
   color: #FFFFFF;
@@ -436,10 +440,10 @@ a, a:hover, a::selection {
   display: flex;
   align-items: center;
   gap: 24px; }
-  #dnd-academy #section-what-is-dnd .content .info, #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product .product, #dnd-academy .initial-product #section-what-is-dnd .content .product {
+  #dnd-academy #section-what-is-dnd .content .info, #dnd-academy #section-what-is-dnd .content img {
     width: 50%; }
 
-#dnd-academy #section-how-play-dnd .info, #dnd-academy #section-how-create-character .info, #dnd-academy #section-resource .info, #dnd-academy #section-how-play-dnd #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #section-how-play-dnd img, #dnd-academy #section-how-create-character #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #section-how-create-character img, #dnd-academy #section-resource #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #section-resource img, #dnd-academy #section-how-play-dnd .initial-product .product, #dnd-academy .initial-product #section-how-play-dnd .product, #dnd-academy #section-how-create-character .initial-product .product, #dnd-academy .initial-product #section-how-create-character .product, #dnd-academy #section-resource .initial-product .product, #dnd-academy .initial-product #section-resource .product {
+#dnd-academy #section-how-play-dnd .info, #dnd-academy #section-how-create-character .info, #dnd-academy #section-resource .info {
   display: flex;
   align-items: center;
   flex-direction: column; }
@@ -460,7 +464,7 @@ a, a:hover, a::selection {
   background-image: url("../assets/img/producto_inicial.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: top;
+  background-position-x: initial;
   background-position-y: top;
   height: 550px;
   color: #FFFFFF; }
@@ -469,24 +473,25 @@ a, a:hover, a::selection {
     justify-content: center;
     align-items: center;
     gap: 1.5rem; }
-  #dnd-academy .initial-product .info, #dnd-academy .initial-product #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product img, #dnd-academy .initial-product .product {
+  #dnd-academy .initial-product .info, #dnd-academy .initial-product .product {
     width: 50%; }
-    #dnd-academy .initial-product .info p, #dnd-academy .initial-product #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content .initial-product img p, #dnd-academy .initial-product .product p {
+    #dnd-academy .initial-product .info p, #dnd-academy .initial-product .product p {
       margin-bottom: 0px; }
-    #dnd-academy .initial-product .info button, #dnd-academy .initial-product #section-what-is-dnd .content img button, #dnd-academy #section-what-is-dnd .content .initial-product img button, #dnd-academy .initial-product .product button {
+    #dnd-academy .initial-product .info button, #dnd-academy .initial-product .product button {
       margin-top: 2.25rem; }
   #dnd-academy .initial-product .product {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
     #dnd-academy .initial-product .product img {
-      width: 60%; }
+      height: 100%; }
 
 #tools .banner#player-tool {
   background-image: url("../assets/img/herramientas_jugador.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: top;
+  background-position-x: initial;
   background-position-y: 45%;
   height: 200px;
   color: #FFFFFF;
@@ -501,7 +506,7 @@ a, a:hover, a::selection {
   background-image: url("../assets/img/herramientas_dungeon_master.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: top;
+  background-position-x: initial;
   background-position-y: 35%;
   height: 200px;
   color: #FFFFFF;
@@ -516,7 +521,7 @@ a, a:hover, a::selection {
   background-image: url("../assets/img/herramientas_reglas.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: top;
+  background-position-x: initial;
   background-position-y: 40%;
   height: 200px;
   color: #FFFFFF;
@@ -544,99 +549,99 @@ a, a:hover, a::selection {
     background-image: url("../assets/img/jugador-razas.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-equipment {
     background-image: url("../assets/img/jugador-equipos.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-spell {
     background-image: url("../assets/img/jugador-hechizos.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-class {
     background-image: url("../assets/img/jugador-clases.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-background {
     background-image: url("../assets/img/jugador-trasfondo.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-treasure-generator {
     background-image: url("../assets/img/dungeon-master-generador-tesoro.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-bestiary {
     background-image: url("../assets/img/dungeon-master-bestiario.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-screen {
     background-image: url("../assets/img/dungeon-master-screen.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-calculator-nd {
     background-image: url("../assets/img/dungeon-master-calculadora-nd.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-adventures {
     background-image: url("../assets/img/reglas-aventuras.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-books {
     background-image: url("../assets/img/reglas-libros.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-conditions {
     background-image: url("../assets/img/reglas-condiciones.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-quick-references {
     background-image: url("../assets/img/reglas-referencias-rapidas.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: top;
-    background-position-y: 40%;
+    background-position-x: initial;
+    background-position-y: 30%;
     color: #FFFFFF; }
 
 #store .banner {
   background-image: url("../assets/img/tienda.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: top;
+  background-position-x: initial;
   background-position-y: 60%;
   height: 200px;
   color: #FFFFFF;
@@ -661,7 +666,7 @@ a, a:hover, a::selection {
       justify-content: center;
       align-items: center;
       flex-direction: row; }
-      #store #search .form .form-control input, #store #search .form .form-control select, #store #search .form .form-control textarea {
+      #store #search .form .form-control input {
         border-top-right-radius: 0px;
         border-bottom-left-radius: 0px; }
       #store #search .form .form-control .btn-search {
@@ -702,7 +707,7 @@ a, a:hover, a::selection {
   background-image: url("../assets/img/consultas.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: top;
+  background-position-x: initial;
   background-position-y: 50%;
   height: 200px;
   color: #FFFFFF;
@@ -720,12 +725,12 @@ a, a:hover, a::selection {
     display: flex;
     gap: 24px; }
 
-#consults .info, #consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #consults img, #consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #consults .product {
+#consults .info {
   width: 50%; }
-  #consults .info p, #consults #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #consults img p, #consults #dnd-academy .initial-product .product p, #dnd-academy .initial-product #consults .product p {
+  #consults .info p {
     font-size: 24px;
     margin-bottom: 1.5rem; }
-  #consults .info span, #consults #dnd-academy #section-what-is-dnd .content img span, #dnd-academy #section-what-is-dnd .content #consults img span, #consults #dnd-academy .initial-product .product span, #dnd-academy .initial-product #consults .product span {
+  #consults .info span {
     font-size: 36px; }
 
 #consults .form {
@@ -750,7 +755,7 @@ a, a:hover, a::selection {
     gap: 24px;
     height: 100%;
     width: 100%; }
-    .footer .social-media a, .footer .social-media a::selection {
+    .footer .social-media a {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -766,9 +771,7 @@ a, a:hover, a::selection {
   #home .banner title, #home .banner .content {
     width: 80%; }
   #home .dnd-academy img {
-    width: 45%; }
-  #dnd-academy .initial-product .product img {
-    width: 70%; } }
+    width: 45%; } }
 
 @media screen and (max-width: 768px) {
   h1 {
@@ -807,12 +810,12 @@ a, a:hover, a::selection {
           flex-direction: column;
           width: 100%;
           text-align: center; }
-          .header .menu.open .menuNav li a, .header .menu.open .menuNav li a::selection, .header .menu.open .menuNav li span {
+          .header .menu.open .menuNav li a, .header .menu.open .menuNav li span {
             padding: 1.5em !important; }
           .header .menu.open .menuNav li:hover {
             background-color: #780A0D;
             cursor: pointer; }
-            .header .menu.open .menuNav li:hover .menu-vertical li a, .header .menu.open .menuNav li:hover .menu-vertical li a::selection {
+            .header .menu.open .menuNav li:hover .menu-vertical li a {
               border: 0; }
             .header .menu.open .menuNav li:hover .menu-vertical:hover {
               border-bottom: 3px solid #780A0D;
@@ -857,14 +860,14 @@ a, a:hover, a::selection {
     #home .tools .slide.hiddenToggle, #home .tools .slide.hiddenToggle img {
       height: 0;
       width: 0; }
-    #home .tools .slide.hiddenToggle .info, #home .tools .slide.hiddenToggle #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide.hiddenToggle img, #home .tools .slide.hiddenToggle #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide.hiddenToggle .product, #home .tools .slide.hiddenToggle .toggle-arrow {
+    #home .tools .slide.hiddenToggle .info, #home .tools .slide.hiddenToggle .toggle-arrow {
       display: none; }
     #home .tools .slide > img {
       display: none; }
     #home .tools .slide#tools-player, #home .tools .slide#tools-dungeon-master, #home .tools .slide#tools-rules {
       background-size: cover;
       background-position-x: center; }
-    #home .tools .slide .info, #home .tools .slide #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide img, #home .tools .slide #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide .product {
+    #home .tools .slide .info {
       display: flex;
       justify-content: center;
       gap: 24px;
@@ -872,7 +875,7 @@ a, a:hover, a::selection {
       color: #FFFFFF;
       width: 100%;
       padding-right: 0; }
-      #home .tools .slide .info .toolTitle ~ p, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle ~ p, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle ~ p, #home .tools .slide #dnd-academy .initial-product .product .toolTitle ~ p, #dnd-academy .initial-product #home .tools .slide .product .toolTitle ~ p, #home .tools .slide .info .toolTitle ~ a, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle ~ a, #home .tools .slide #dnd-academy .initial-product .product .toolTitle ~ a, #dnd-academy .initial-product #home .tools .slide .product .toolTitle ~ a, #home .tools .slide .info .toolTitle ~ a::selection, #home .tools .slide #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a::selection, #dnd-academy #section-what-is-dnd .content #home .tools .slide img .toolTitle ~ a::selection, #home .tools .slide #dnd-academy .initial-product .product .toolTitle ~ a::selection, #dnd-academy .initial-product #home .tools .slide .product .toolTitle ~ a::selection {
+      #home .tools .slide .info .toolTitle ~ p, #home .tools .slide .info .toolTitle ~ a {
         display: none; }
     #home .tools .slide .toggle-arrow {
       width: 20%;
@@ -887,22 +890,22 @@ a, a:hover, a::selection {
       height: auto; }
       #home .tools .slide.opened .toggle-arrow img {
         transform: rotate(90deg); }
-      #home .tools .slide.opened .info, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img, #home .tools .slide.opened #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .tools .slide.opened .product {
+      #home .tools .slide.opened .info {
         padding-top: 2rem;
         padding-bottom: 2rem; }
-        #home .tools .slide.opened .info .toolTitle ~ p, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img .toolTitle ~ p, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img .toolTitle ~ p, #home .tools .slide.opened #dnd-academy .initial-product .product .toolTitle ~ p, #dnd-academy .initial-product #home .tools .slide.opened .product .toolTitle ~ p, #home .tools .slide.opened .info .toolTitle ~ a, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img .toolTitle ~ a, #home .tools .slide.opened #dnd-academy .initial-product .product .toolTitle ~ a, #dnd-academy .initial-product #home .tools .slide.opened .product .toolTitle ~ a, #home .tools .slide.opened .info .toolTitle ~ a::selection, #home .tools .slide.opened #dnd-academy #section-what-is-dnd .content img .toolTitle ~ a::selection, #dnd-academy #section-what-is-dnd .content #home .tools .slide.opened img .toolTitle ~ a::selection, #home .tools .slide.opened #dnd-academy .initial-product .product .toolTitle ~ a::selection, #dnd-academy .initial-product #home .tools .slide.opened .product .toolTitle ~ a::selection {
+        #home .tools .slide.opened .info .toolTitle ~ p, #home .tools .slide.opened .info .toolTitle ~ a {
           display: block; }
   #home .consults {
     height: auto;
     padding-top: 32px;
     padding-bottom: 32px; }
-    #home .consults .info, #home .consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .consults img, #home .consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .consults .product, #home .consults .form {
+    #home .consults .info, #home .consults .form {
       width: 50%; }
   #dnd-academy p {
     align-self: flex-start; }
   #dnd-academy #section-what-is-dnd .content {
     flex-direction: column; }
-    #dnd-academy #section-what-is-dnd .content .info, #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product .product, #dnd-academy .initial-product #section-what-is-dnd .content .product, #dnd-academy #section-what-is-dnd .content img {
+    #dnd-academy #section-what-is-dnd .content .info, #dnd-academy #section-what-is-dnd .content img {
       width: 100%; }
   #store #search .form {
     width: 100%; }
@@ -915,12 +918,12 @@ a, a:hover, a::selection {
       display: flex;
       gap: 32px;
       flex-direction: column; }
-  #consults .info, #consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #consults img, #consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #consults .product, #consults .form {
+  #consults .info, #consults .form {
     width: 100%; }
-  #consults .info p, #consults #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #consults img p, #consults #dnd-academy .initial-product .product p, #dnd-academy .initial-product #consults .product p {
+  #consults .info p {
     font-size: 20px;
     margin-bottom: 2rem; }
-  #consults .info span, #consults #dnd-academy #section-what-is-dnd .content img span, #dnd-academy #section-what-is-dnd .content #consults img span, #consults #dnd-academy .initial-product .product span, #dnd-academy .initial-product #consults .product span {
+  #consults .info span {
     font-size: 28px; }
   #consults .form {
     grid-template-columns: 100%; }
@@ -932,7 +935,7 @@ a, a:hover, a::selection {
     #consults .form .form-control {
       display: flex;
       justify-content: center; }
-    #consults .form input[type='submit'], #consults .form .form-control select[type='submit'], #consults .form .form-control textarea[type='submit'] {
+    #consults .form input[type='submit'] {
       width: 100%; } }
 
 @media screen and (max-width: 664px) {
@@ -944,16 +947,20 @@ a, a:hover, a::selection {
       flex-direction: column-reverse;
       padding-top: 2rem;
       padding-bottom: 2rem; }
-    #dnd-academy .initial-product .info, #dnd-academy .initial-product #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content .initial-product img, #dnd-academy .initial-product .product, #dnd-academy .initial-product .product {
+    #dnd-academy .initial-product .info, #dnd-academy .initial-product .product {
       width: 100%; }
-    #dnd-academy .initial-product .info p, #dnd-academy .initial-product #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content .initial-product img p, #dnd-academy .initial-product .product p {
+    #dnd-academy .initial-product .info p {
       margin-bottom: 0px; }
-    #dnd-academy .initial-product .info button, #dnd-academy .initial-product #section-what-is-dnd .content img button, #dnd-academy #section-what-is-dnd .content .initial-product img button, #dnd-academy .initial-product .product button {
+    #dnd-academy .initial-product .info button {
       margin-top: 1.5rem; }
     #dnd-academy .initial-product .product {
       display: flex;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      height: auto;
+      width: 100%; }
+      #dnd-academy .initial-product .product img {
+        width: 100%; } }
 
 @media screen and (max-width: 576px) {
   h1 {
@@ -989,7 +996,7 @@ a, a:hover, a::selection {
     display: none; }
   #home .consults .flex {
     flex-direction: column; }
-  #home .consults .info, #home .consults #dnd-academy #section-what-is-dnd .content img, #dnd-academy #section-what-is-dnd .content #home .consults img, #home .consults #dnd-academy .initial-product .product, #dnd-academy .initial-product #home .consults .product, #home .consults .form {
+  #home .consults .info, #home .consults .form {
     width: 100% !important;
     text-align: center; }
   #dnd-academy .banner {
@@ -998,7 +1005,7 @@ a, a:hover, a::selection {
     flex-wrap: wrap;
     padding-left: 16px;
     padding-right: 16px; }
-  #dnd-academy #section-how-play-dnd .info iframe, #dnd-academy #section-how-create-character .info iframe, #dnd-academy #section-resource .info iframe, #dnd-academy #section-how-play-dnd #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-how-play-dnd img iframe, #dnd-academy #section-how-create-character #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-how-create-character img iframe, #dnd-academy #section-resource #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-resource img iframe, #dnd-academy #section-how-play-dnd .initial-product .product iframe, #dnd-academy .initial-product #section-how-play-dnd .product iframe, #dnd-academy #section-how-create-character .initial-product .product iframe, #dnd-academy .initial-product #section-how-create-character .product iframe, #dnd-academy #section-resource .initial-product .product iframe, #dnd-academy .initial-product #section-resource .product iframe, #dnd-academy #section-how-create-character .info iframe, #dnd-academy #section-how-create-character #section-what-is-dnd .content img iframe, #dnd-academy #section-what-is-dnd .content #section-how-create-character img iframe, #dnd-academy #section-how-create-character .initial-product .product iframe, #dnd-academy .initial-product #section-how-create-character .product iframe {
+  #dnd-academy #section-how-play-dnd .info iframe, #dnd-academy #section-how-create-character .info iframe {
     width: 100%; }
   #dnd-academy #section-resource .btn-download {
     display: flex;
@@ -1075,10 +1082,10 @@ a, a:hover, a::selection {
     #consults .banner .flex {
       align-items: flex-end;
       justify-content: flex-start; }
-  #consults .info p, #consults #dnd-academy #section-what-is-dnd .content img p, #dnd-academy #section-what-is-dnd .content #consults img p, #consults #dnd-academy .initial-product .product p, #dnd-academy .initial-product #consults .product p {
+  #consults .info p {
     font-size: 16px;
     margin-bottom: 2rem; }
-  #consults .info span, #consults #dnd-academy #section-what-is-dnd .content img span, #dnd-academy #section-what-is-dnd .content #consults img span, #consults #dnd-academy .initial-product .product span, #dnd-academy .initial-product #consults .product span {
+  #consults .info span {
     font-size: 24px; }
   #consults .form {
     grid-template-columns: 100%; }
@@ -1092,14 +1099,14 @@ a, a:hover, a::selection {
     #consults .form .btns-form {
       display: flex;
       justify-content: center; }
-    #consults .form input[type='submit'], #consults .form .form-control select[type='submit'], #consults .form .form-control textarea[type='submit'] {
+    #consults .form input[type='submit'] {
       width: 100%; }
   .footer {
     height: auto;
     padding: 1rem 3.25rem; }
     .footer .social-media {
       flex-wrap: wrap; }
-      .footer .social-media a, .footer .social-media a::selection {
+      .footer .social-media a {
         width: 36px;
         height: 36px; }
       .footer .social-media img {
