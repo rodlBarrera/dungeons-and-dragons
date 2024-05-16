@@ -1,7 +1,7 @@
 // Consultas
 #consults {
     .banner {
-        @include banner_small('../assets/img/consultas.webp', cover, 50%, 200px);
+        @include banner_small('https://i.postimg.cc/vTBjqyWn/consultas.webp', cover, 50%, 200px);
     }
     #consult-content {
         padding-top: 6em;

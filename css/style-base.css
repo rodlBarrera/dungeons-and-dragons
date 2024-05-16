@@ -442,7 +442,7 @@ a, a:hover, a::selection {
 /* Home */
 /* Home - Banner */
 #home .banner {
-    background-image: url('../assets/img/home_banner.webp');
+    background-image: url('../assets/img/home-banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -618,7 +618,7 @@ a, a:hover, a::selection {
 }
 
 #home .tools #tools-player {
-    background-image: url('../assets/img/herramientas_jugador.webp');
+    background-image: url('../assets/img/herramientas-jugador.webp');
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-y: center;
@@ -626,7 +626,7 @@ a, a:hover, a::selection {
 }
 
 #home .tools #tools-dungeon-master {
-    background-image: url('../assets/img/herramientas_dungeon_master.webp');
+    background-image: url('../assets/img/herramientas-dungeon-master.webp');
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-y: center;
@@ -634,7 +634,7 @@ a, a:hover, a::selection {
 }
 
 #home .tools #tools-rules {
-    background-image: url('../assets/img/herramientas_reglas.webp');
+    background-image: url('../assets/img/herramientas-reglas.webp');
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-y: center;
@@ -833,7 +833,7 @@ a, a:hover, a::selection {
 /* Home - Consultas */
 #home .consults {
     height: 34.375rem;
-    background-image: url('../assets/img/consultas.webp');
+    background-image: url('../assets/img/consultas.webpp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1085,7 +1085,7 @@ a, a:hover, a::selection {
     width: 100%;
     height: 550px;
     color: var(--color-white);
-    background-image: url('../assets/img/producto_inicial.webp');
+    background-image: url('../assets/img/producto-inicial.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1221,7 +1221,7 @@ a, a:hover, a::selection {
 /* Herramientas - Jugador */
 /* Herramientas - Jugador - Banner */
 #tools .banner#player-tool {
-    background-image: url('../assets/img/herramientas_jugador.webp');
+    background-image: url('../assets/img/herramientas-jugador.webp');
     background-position-y: 45%;
 }
 
@@ -1261,7 +1261,7 @@ a, a:hover, a::selection {
 /* Herramientas - Dungeon Master */
 /* Herramientas - Dungeon Master - Banner */
 #tools .banner#dungeon-master-tool {
-    background-image: url('../assets/img/herramientas_dungeon_master.webp');
+    background-image: url('../assets/img/herramientas-dungeon-master.webp');
     background-position-y: 35%;
 }
 
@@ -1296,7 +1296,7 @@ a, a:hover, a::selection {
 /* Herramientas - Rules */
 /* Herramientas - Rules - Banner */
 #tools .banner#rules-tool {
-    background-image: url('../assets/img/herramientas_reglas.webp');
+    background-image: url('../assets/img/herramientas-reglas.webp');
     background-position-y: 40%;
 }
 
@@ -1546,7 +1546,7 @@ a, a:hover, a::selection {
 #consults .banner {
     width: 100%;
     height: 200px;
-    background-image: url('../assets/img/consultas.webp');
+    background-image: url('../assets/img/consultas.webpp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 50%;

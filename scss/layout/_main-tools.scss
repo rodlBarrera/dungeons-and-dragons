@@ -2,13 +2,13 @@
 #tools {
     .banner {
         &#player-tool {
-            @include banner_small('../assets/img/herramientas_jugador.webp', cover, 45%, 200px);
+            @include banner_small('https://i.postimg.cc/K8kbcP3T/herramientas-jugador.webp', cover, 45%, 200px);
         }
         &#dungeon-master-tool {
-            @include banner_small('../assets/img/herramientas_dungeon_master.webp', cover, 35%, 200px);
+            @include banner_small('https://i.postimg.cc/zfT1KqjX/herramientas-dungeon-master.webp', cover, 35%, 200px);
         }
         &#rules-tool {
-            @include banner_small('../assets/img/herramientas_reglas.webp', cover, 40%, 200px);
+            @include banner_small('https://i.postimg.cc/J4dmW60m/herramientas-reglas.webp', cover, 40%, 200px);
         }
     }
     .tools-list {
@@ -28,43 +28,43 @@
                 }
             }
             #tool-race {
-                @include toolCard('../assets/img/jugador-razas.webp');
+                @include toolCard('https://i.postimg.cc/W36TLsFf/jugador-razas.webp');
             }
             #tool-equipment {
-                @include toolCard('../assets/img/jugador-equipos.webp');
+                @include toolCard('https://i.postimg.cc/66ctM5N8/jugador-equipos.webp');
             }
             #tool-spell {
-                @include toolCard('../assets/img/jugador-hechizos.webp');
+                @include toolCard('https://i.postimg.cc/C5c05J4G/jugador-hechizos.webp');
             }
             #tool-class {
-                @include toolCard('../assets/img/jugador-clases.webp');
+                @include toolCard('https://i.postimg.cc/hvDgKNV4/jugador-clases.webp');
             }
             #tool-background {
-                @include toolCard('../assets/img/jugador-trasfondo.webp');
+                @include toolCard('https://i.postimg.cc/LsPmDtHS/jugador-trasfondo.webp');
             }
             #tool-treasure-generator {
-                @include toolCard('../assets/img/dungeon-master-generador-tesoro.webp');
+                @include toolCard('https://i.postimg.cc/SxM0bmH7/dungeon-master-generador-tesoro.webp');
             }
             #tool-bestiary {
-                @include toolCard('../assets/img/dungeon-master-bestiario.webp');
+                @include toolCard('https://i.postimg.cc/85w9mcrD/dungeon-master-bestiario.webp');
             }
             #tool-screen {
-                @include toolCard('../assets/img/dungeon-master-screen.webp');
+                @include toolCard('https://i.postimg.cc/qB1H8b8n/dungeon-master-screen.webp');
             }
             #tool-calculator-nd {
-                @include toolCard('../assets/img/dungeon-master-calculadora-nd.webp');
+                @include toolCard('https://i.postimg.cc/QMG2XR3L/dungeon-master-calculadora-nd.webp');
             }
             #tool-adventures {
-                @include toolCard('../assets/img/reglas-aventuras.webp');
+                @include toolCard('https://i.postimg.cc/63spxHHT/reglas-aventuras.webp');
             }
             #tool-books {
-                @include toolCard('../assets/img/reglas-libros.webp');
+                @include toolCard('https://i.postimg.cc/g0L259Hf/reglas-libros.webp');
             }
             #tool-conditions {
-                @include toolCard('../assets/img/reglas-condiciones.webp');
+                @include toolCard('https://i.postimg.cc/y8bNv6cm/reglas-condiciones.webp');
             }
             #tool-quick-references {
-                @include toolCard('../assets/img/reglas-referencias-rapidas.webp');
+                @include toolCard('https://i.postimg.cc/NjMM629G/reglas-referencias-rapidas.webp');
             }
         }
     }

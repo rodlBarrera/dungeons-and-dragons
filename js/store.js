@@ -74,7 +74,7 @@ btn.addEventListener('click', () => {
     switch(sortValue) {
         case sortDataValueOptions.asc:
             btn.setAttribute('data-sort', sortDataValueOptions.desc);
-            imgSort.src = `../assets/img/sort_icon_${sortDataValueOptions.desc}.webp`;
+            imgSort.src = `../assets/img/sort-icon-${sortDataValueOptions.desc}.svg`;
             imgSort.alt = 'Icono para ordenar de forma descendente';
             sortProductList('desc', allCards);
             initialPack.classList.add('hidden');
@@ -82,7 +82,7 @@ btn.addEventListener('click', () => {
         
         case sortDataValueOptions.desc:
             btn.setAttribute('data-sort', sortDataValueOptions.all);
-            imgSort.src = `../assets/img/sort_icon_${sortDataValueOptions.all}.webp`;
+            imgSort.src = `../assets/img/sort-icon-${sortDataValueOptions.all}.svg`;
             imgSort.alt = 'Icono para ordenar';
             sortProductList('all', allCards);
             initialPack.classList.remove('hidden');
@@ -90,7 +90,7 @@ btn.addEventListener('click', () => {
         
         case sortDataValueOptions.all:
             btn.setAttribute('data-sort', sortDataValueOptions.asc);
-            imgSort.src = `../assets/img/sort_icon_${sortDataValueOptions.asc}.webp`;
+            imgSort.src = `../assets/img/sort-icon-${sortDataValueOptions.asc}.svg`;
             imgSort.alt = 'Icono para ordenar de forma ascendente';
             sortProductList('asc', allCards);
             initialPack.classList.add('hidden');
@@ -98,7 +98,7 @@ btn.addEventListener('click', () => {
 
         default:
             btn.setAttribute('data-sort', sortDataValueOptions.all);
-            imgSort.src = `../assets/img/sort_icon_${sortDataValueOptions.all}.webp`;
+            imgSort.src = `../assets/img/sort-icon-${sortDataValueOptions.all}.svg`;
             imgSort.alt = 'Icono para ordenar';
             sortProductList('all', allCards);
             initialPack.classList.remove('hidden');
