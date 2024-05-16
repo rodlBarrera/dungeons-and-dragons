@@ -2,13 +2,13 @@
 #tools {
     .banner {
         &#player-tool {
-            @include banner_small('../assets/img/herramientas_jugador.webp', cover, 45%, 200px);
+            @include banner_small('../assets/img/herramientas-jugador.webp', cover, 45%, 200px);
         }
         &#dungeon-master-tool {
-            @include banner_small('../assets/img/herramientas_dungeon_master.webp', cover, 35%, 200px);
+            @include banner_small('../assets/img/herramientas-dungeon-master.webp', cover, 35%, 200px);
         }
         &#rules-tool {
-            @include banner_small('../assets/img/herramientas_reglas.webp', cover, 40%, 200px);
+            @include banner_small('../assets/img/herramientas-reglas.webp', cover, 40%, 200px);
         }
     }
     .tools-list {
