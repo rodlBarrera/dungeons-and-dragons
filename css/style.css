@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -215,7 +215,7 @@ a {
           padding: 0; }
 
 #home .banner {
-  background-image: url("../assets/img/home_banner.webp");
+  background-image: url("../assets/img/home_banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -274,21 +274,21 @@ a {
     #home .tools .slide.hiddenToggle img {
       display: none; }
   #home .tools .slide#tools-player {
-    background-image: url("../assets/img/herramientas_jugador.webp");
+    background-image: url("../assets/img/herramientas_jugador.png");
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-x: left;
     background-position-y: center;
     color: #FFFFFF; }
   #home .tools .slide#tools-dungeon-master {
-    background-image: url("../assets/img/herramientas_dungeon_master.webp");
+    background-image: url("../assets/img/herramientas_dungeon_master.png");
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-x: center;
     background-position-y: center;
     color: #FFFFFF; }
   #home .tools .slide#tools-rules {
-    background-image: url("../assets/img/herramientas_reglas.webp");
+    background-image: url("../assets/img/herramientas_reglas.png");
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-x: right;
@@ -360,7 +360,7 @@ a {
       height: 140px; }
 
 #home .consults {
-  background-image: url("../assets/img/consultas.webp");
+  background-image: url("../assets/img/consultas.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -393,7 +393,7 @@ a {
   margin-bottom: 16px; }
 
 #dnd-academy .banner {
-  background-image: url("../assets/img/academia-dnd.webp");
+  background-image: url("../assets/img/academia-dnd.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: initial;
@@ -461,10 +461,10 @@ a {
 
 #dnd-academy .initial-product {
   width: 100%;
-  background-image: url("../assets/img/producto_inicial.webp");
+  background-image: url("../assets/img/producto_inicial.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: initial;
+  background-position-x: top;
   background-position-y: top;
   height: 550px;
   color: #FFFFFF; }
@@ -488,7 +488,7 @@ a {
       height: 100%; }
 
 #tools .banner#player-tool {
-  background-image: url("../assets/img/herramientas_jugador.webp");
+  background-image: url("../assets/img/herramientas_jugador.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: initial;
@@ -503,7 +503,7 @@ a {
       margin-bottom: 1rem; }
 
 #tools .banner#dungeon-master-tool {
-  background-image: url("../assets/img/herramientas_dungeon_master.webp");
+  background-image: url("../assets/img/herramientas_dungeon_master.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: initial;
@@ -518,7 +518,7 @@ a {
       margin-bottom: 1rem; }
 
 #tools .banner#rules-tool {
-  background-image: url("../assets/img/herramientas_reglas.webp");
+  background-image: url("../assets/img/herramientas_reglas.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: initial;
@@ -546,91 +546,91 @@ a {
       padding: 1em;
       width: 100%; }
   #tools .tools-list .tools-grid #tool-race {
-    background-image: url("../assets/img/jugador-razas.webp");
+    background-image: url("../assets/img/jugador-razas.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-equipment {
-    background-image: url("../assets/img/jugador-equipos.webp");
+    background-image: url("../assets/img/jugador-equipos.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-spell {
-    background-image: url("../assets/img/jugador-hechizos.webp");
+    background-image: url("../assets/img/jugador-hechizos.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-class {
-    background-image: url("../assets/img/jugador-clases.webp");
+    background-image: url("../assets/img/jugador-clases.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-background {
-    background-image: url("../assets/img/jugador-trasfondo.webp");
+    background-image: url("../assets/img/jugador-trasfondo.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-treasure-generator {
-    background-image: url("../assets/img/dungeon-master-generador-tesoro.webp");
+    background-image: url("../assets/img/dungeon-master-generador-tesoro.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-bestiary {
-    background-image: url("../assets/img/dungeon-master-bestiario.webp");
+    background-image: url("../assets/img/dungeon-master-bestiario.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-screen {
-    background-image: url("../assets/img/dungeon-master-screen.webp");
+    background-image: url("../assets/img/dungeon-master-screen.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-calculator-nd {
-    background-image: url("../assets/img/dungeon-master-calculadora-nd.webp");
+    background-image: url("../assets/img/dungeon-master-calculadora-nd.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-adventures {
-    background-image: url("../assets/img/reglas-aventuras.webp");
+    background-image: url("../assets/img/reglas-aventuras.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-books {
-    background-image: url("../assets/img/reglas-libros.webp");
+    background-image: url("../assets/img/reglas-libros.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-conditions {
-    background-image: url("../assets/img/reglas-condiciones.webp");
+    background-image: url("../assets/img/reglas-condiciones.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
     background-position-y: 30%;
     color: #FFFFFF; }
   #tools .tools-list .tools-grid #tool-quick-references {
-    background-image: url("../assets/img/reglas-referencias-rapidas.webp");
+    background-image: url("../assets/img/reglas-referencias-rapidas.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: initial;
@@ -638,7 +638,7 @@ a {
     color: #FFFFFF; }
 
 #store .banner {
-  background-image: url("../assets/img/tienda.webp");
+  background-image: url("../assets/img/tienda.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: initial;
@@ -704,7 +704,7 @@ a {
   display: none; }
 
 #consults .banner {
-  background-image: url("../assets/img/consultas.webp");
+  background-image: url("../assets/img/consultas.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: initial;

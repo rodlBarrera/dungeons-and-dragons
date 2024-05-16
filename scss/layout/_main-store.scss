@@ -1,7 +1,7 @@
 // Tienda
 #store {
     .banner {
-        @include banner_small('../assets/img/tienda.webp', cover, 60%, 200px);
+        @include banner_small('../assets/img/tienda.png', cover, 60%, 200px);
     }
     #search {
         height: 160px;
