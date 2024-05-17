@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build": "concurrently \"minify css/style.css > css/style.min.css\"  \"minify js/header.js > js/header.min.js\" \"minify js/home.js > js/home.min.js\" \"minify js/dnd-academy.js > js/dnd-academy.min.js\" \"minify js/store.js > js/store.min.js\""
+
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   },
   "homepage": "https://github.com/rodlBarrera/dungeons-and-dragons#readme",
   "devDependencies": {
+    "concurrently": "^8.2.2",
+    "minify": "^11.1.1",
     "node-sass": "^9.0.0",
     "nodemon": "^3.1.0"
   }
