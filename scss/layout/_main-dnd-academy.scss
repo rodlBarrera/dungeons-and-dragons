@@ -69,7 +69,7 @@
     }
     .initial-product {
         width: 100%;
-        @include banner('https://i.postimg.cc/nzvcFv52/producto-inicial.webp', cover, top, top, $height: 550px);
+        @include banner('https://i.postimg.cc/nzvcFv52/producto-inicial.webp', cover, left, top, $height: 550px);
         .flex {
             @include flex(center, center, 1.5rem);
         }
