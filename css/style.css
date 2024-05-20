@@ -27,12 +27,9 @@ h2 {
 span {
   font-weight: 600; }
 
-a {
+.extend_a, a, a:hover, a::selection {
   text-decoration: none;
   color: #000000; }
-  a:hover, a::selection {
-    text-decoration: none;
-    color: #000000; }
 
 .dnd-container {
   padding: 0 10vw;

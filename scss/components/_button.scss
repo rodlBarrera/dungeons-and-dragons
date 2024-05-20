@@ -23,7 +23,7 @@
     border-radius: 8px;
     height: 32px;
     cursor: pointer;
-    &:hover,&.selected {
+    &:hover, &.selected {
         background-color: map-get($color, 'red-dark');
     }
     img {
