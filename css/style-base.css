@@ -515,7 +515,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Home - Academia de DnD */
+/* Home - Academia de D&D */
 #home .dnd-academy {
     padding: 4rem 0;
 }
@@ -889,7 +889,7 @@ a, a:hover, a::selection {
 
 
 
-/* Academia de DnD */
+/* Academia de D&D */
 #dnd-academy h2 {
     margin-bottom: 36px;
 }
@@ -906,7 +906,7 @@ a, a:hover, a::selection {
     margin-bottom: 16px;
 }
 
-/* Academia de DnD - Banner */
+/* Academia de D&D - Banner */
 #dnd-academy .banner {
     width: 100%;
     height: 200px;
@@ -927,7 +927,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Media Query - Academia de DnD - Banner */
+/* Media Query - Academia de D&D - Banner */
 @media screen and (576px >= width >= 320px) {
     #dnd-academy .banner {
         background-size: cover;
@@ -935,7 +935,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Academia de DnD - Selecciones */
+/* Academia de D&D - Selecciones */
 #dnd-academy .options {
     display: flex;
     align-items: center;
@@ -974,7 +974,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Media Query - Academia de DnD - Selectores */
+/* Media Query - Academia de D&D - Selectores */
 @media screen and (576px >= width >= 320px) {
     #dnd-academy .options {
         flex-wrap: wrap;
@@ -984,7 +984,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Academia de DnD - Que es DnD */
+/* Academia de D&D - Que es DnD */
 #dnd-academy #section-what-is-dnd .content {
     display: flex;
     align-items: center;
@@ -996,7 +996,7 @@ a, a:hover, a::selection {
     width: 50%;
 }
 
-/* Media Query - Academia de DnD - Que es DnD */
+/* Media Query - Academia de D&D - Que es DnD */
 @media screen and (768px >= width >= 320px) {
     #dnd-academy #section-what-is-dnd .content {
         flex-direction: column;
@@ -1009,7 +1009,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Academia de DnD - Como jugar DnD */
+/* Academia de D&D - Como jugar DnD */
 #dnd-academy #section-how-play-dnd .info {
     display: flex;
     flex-direction: column;
@@ -1017,7 +1017,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Media Query - Academia de DnD - Como jugar DnD */
+/* Media Query - Academia de D&D - Como jugar DnD */
 @media screen and (576px >= width >= 320px) {
     #dnd-academy #section-how-play-dnd .info iframe {
         width: 100%;
@@ -1025,7 +1025,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Academia de DnD - Como crear tu personaje */
+/* Academia de D&D - Como crear tu personaje */
 #dnd-academy #section-how-create-character .info {
     display: flex;
     flex-direction: column;
@@ -1033,7 +1033,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Media Query - Academia de DnD - Como crear tu personaje */
+/* Media Query - Academia de D&D - Como crear tu personaje */
 @media screen and (576px >= width >= 320px) {
     #dnd-academy #section-how-create-character .info iframe {
         width: 100%;
@@ -1041,7 +1041,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Academia de DnD - Recursos */
+/* Academia de D&D - Recursos */
 #dnd-academy #section-resource .info {
     display: flex;
     flex-direction: column;
@@ -1065,7 +1065,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Media Query - Academia de DnD - Recursos */
+/* Media Query - Academia de D&D - Recursos */
 @media screen and (576px >= width >= 320px) {
     #dnd-academy #section-resource .btn-download {
         display: flex;
@@ -1080,7 +1080,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Academia de DnD - Producto Inicial */
+/* Academia de D&D - Producto Inicial */
 #dnd-academy .initial-product {
     width: 100%;
     height: 550px;
@@ -1121,7 +1121,7 @@ a, a:hover, a::selection {
 }
 
 
-/* Media Query - Academia de DnD - Producto Inicial */
+/* Media Query - Academia de D&D - Producto Inicial */
 @media screen and (1024px >= width) {
     #dnd-academy .initial-product .product img {
         width: 70%;
