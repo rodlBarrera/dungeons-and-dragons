@@ -54,12 +54,9 @@ h2 {
 span {
   font-weight: 600; }
 
-a {
+.extend_a, a, a:hover, a::selection {
   text-decoration: none;
   color: #000000; }
-  a:hover, a::selection {
-    text-decoration: none;
-    color: #000000; }
 
 .dnd-container {
   padding: 0 10vw;
@@ -717,8 +714,113 @@ a {
 #store .title {
   margin-bottom: 1.5rem; }
 
-#store #initial-pack, #store #products {
+#store #initial-pack,
+#store #products {
   padding: 2.25rem 0; }
+  #store #initial-pack .card,
+  #store #products .card {
+    opacity: 0;
+    transition: 500ms all ease-in-out; }
+    #store #initial-pack .card:nth-child(1),
+    #store #products .card:nth-child(1) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 100ms; }
+    #store #initial-pack .card:nth-child(2),
+    #store #products .card:nth-child(2) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 200ms; }
+    #store #initial-pack .card:nth-child(3),
+    #store #products .card:nth-child(3) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 300ms; }
+    #store #initial-pack .card:nth-child(4),
+    #store #products .card:nth-child(4) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 400ms; }
+    #store #initial-pack .card:nth-child(5),
+    #store #products .card:nth-child(5) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 500ms; }
+    #store #initial-pack .card:nth-child(6),
+    #store #products .card:nth-child(6) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 600ms; }
+    #store #initial-pack .card:nth-child(7),
+    #store #products .card:nth-child(7) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 700ms; }
+    #store #initial-pack .card:nth-child(8),
+    #store #products .card:nth-child(8) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 800ms; }
+    #store #initial-pack .card:nth-child(9),
+    #store #products .card:nth-child(9) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 900ms; }
+    #store #initial-pack .card:nth-child(10),
+    #store #products .card:nth-child(10) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1000ms; }
+    #store #initial-pack .card:nth-child(11),
+    #store #products .card:nth-child(11) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1100ms; }
+    #store #initial-pack .card:nth-child(12),
+    #store #products .card:nth-child(12) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1200ms; }
+    #store #initial-pack .card:nth-child(13),
+    #store #products .card:nth-child(13) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1300ms; }
+    #store #initial-pack .card:nth-child(14),
+    #store #products .card:nth-child(14) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1400ms; }
+    #store #initial-pack .card:nth-child(15),
+    #store #products .card:nth-child(15) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1500ms; }
+    #store #initial-pack .card:nth-child(16),
+    #store #products .card:nth-child(16) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1600ms; }
+    #store #initial-pack .card:nth-child(17),
+    #store #products .card:nth-child(17) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1700ms; }
+    #store #initial-pack .card:nth-child(18),
+    #store #products .card:nth-child(18) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1800ms; }
+    #store #initial-pack .card:nth-child(19),
+    #store #products .card:nth-child(19) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 1900ms; }
+    #store #initial-pack .card:nth-child(20),
+    #store #products .card:nth-child(20) {
+      animation: fadeIn 0.9s 1;
+      animation-fill-mode: forwards;
+      animation-delay: 2000ms; }
 
 #store .badget {
   display: flex;
@@ -729,6 +831,12 @@ a {
 
 #store .filter-sort {
   display: none; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 #consults .banner {
   background-image: url("https://i.postimg.cc/vTBjqyWn/consultas.webp");
