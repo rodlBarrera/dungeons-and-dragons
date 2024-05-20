@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="preload" fetchpriority="high" as="image" href="https://i.postimg.cc/sD2yqdVw/home-banner.webp" type="image/webp">
     <meta name="description" content="Sumérgete en el fascinante universo de Dungeons and Dragons, crea tu personaje y enfréntate a desafíos épicos. ¡Comienza tu viaje hoy mismo en la Academia de DnD!" />
     <meta name="keywords" content="Dungeons and Dragons, DnD, juego de rol, fantasía, aventuras, personajes, bestiario, reglas, tienda, consultas" />
     <meta name="roboto" content="index, follow" />
@@ -33,10 +34,10 @@
             <a href="#">
                 <picture>
                     <source media="(max-width: 428px)" srcset="./assets/img/dnd-logo-xs.svg">
-                    <img src="./assets/img/dnd-logo.svg" alt="logo de Dungeons & Dragons" />
+                    <img src="./assets/img/dnd-logo.svg" alt="logo de Dungeons & Dragons" width="300px" height="34px"/>
                 </picture>
             </a>
-            <button id="menu-hamb"><img src="./assets/img/menu-hamburger.svg" alt="menu hamburguesa"></button>
+            <button id="menu-hamb"><img src="./assets/img/menu-hamburger.svg" width="40px" height="40px" alt="menu hamburguesa"></button>
         </div>
         <nav class="menu">
             <ul class="menuNav">
@@ -79,7 +80,7 @@
         </section>
         <section class="dnd-academy">
             <div class="dnd-container flex">
-                <img src="https://i.postimg.cc/3NcqzqBc/comienzo-aventura.webp" alt="aventureros de distintas clases luchando">
+                <img src="https://i.postimg.cc/3NcqzqBc/comienzo-aventura.webp" width="528" height="597" alt="aventureros de distintas clases luchando">
                 <div class="content">
                     <h2>Academia de DnD</h2>
                     <p>Sumérgete en el fascinante universo de Dungeons and Dragons y aprende cómo jugar este emocionante
@@ -163,17 +164,17 @@
                         <h2>Productos recomendados</h2>
                         <div class="slider-btns">
                             <div class="btn-prev slide-btn">
-                                <img src="./assets/img/left-arrow.svg" loading="lazy" alt="flecha a la izquierda">
+                                <img src="./assets/img/left-arrow.svg" loading="lazy" width="32" height="32" alt="flecha a la izquierda">
                             </div>
                             <div class="btn-next slide-btn">
-                                <img src="./assets/img/right-arrow.svg" loading="lazy" alt="flecha a la derecha">
+                                <img src="./assets/img/right-arrow.svg" loading="lazy" width="32" height="32" alt="flecha a la derecha">
                             </div>
                         </div>
                     </hgroup>
                     <section class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="card">
-                                <img src="https://i.postimg.cc/sxsfvMCr/manual-del-jugador.webp" loading="lazy" alt="manual del jugador de DnD">
+                                <img src="https://i.postimg.cc/sxsfvMCr/manual-del-jugador.webp" loading="lazy" width="300" height="200" alt="manual del jugador de DnD">
                                 <div class="card-content">
                                     <p class="name">Manual del Jugador</p>
                                     <a href="#"><img class="arrow-go lazyload" src="./assets/img/right-arrow.svg"
@@ -184,6 +185,7 @@
                         <div class="swiper-slide">
                             <article class="card">
                                 <img src="https://i.postimg.cc/rwBkDD5P/guia-del-dungeon-master.webp"
+                                    width="300" height="200"
                                     loading="lazy" alt="guía del dungeon master de DnD">
                                 <div class="card-content">
                                     <p class="name">Guía del Dungeon Master</p>
@@ -194,7 +196,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="card">
-                                <img src="https://i.postimg.cc/dQjtgjGt/manual-de-monstruos.webp" loading="lazy" alt="manual del monstruos de DnD">
+                                <img src="https://i.postimg.cc/dQjtgjGt/manual-de-monstruos.webp" loading="lazy" width="300" height="200" alt="manual del monstruos de DnD">
                                 <div class="card-content">
                                     <p class="name">Manual de monstruos</p>
                                     <a href="#"><img class="arrow-go lazyload" src="./assets/img/right-arrow.svg"
@@ -204,7 +206,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="card">
-                                <img src="https://i.postimg.cc/g2R7BN6g/caja-de-inicio.webp" loading="lazy" alt="caja de inicio de DnD">
+                                <img src="https://i.postimg.cc/g2R7BN6g/caja-de-inicio.webp" loading="lazy" width="300" height="200" alt="caja de inicio de DnD">
                                 <div class="card-content">
                                     <p class="name">Caja de Inicio</p>
                                     <a href="#"><img class="arrow-go" loading="lazy" src="./assets/img/right-arrow.svg"
@@ -214,7 +216,7 @@
                         </div>
                         <div class="swiper-slide">
                             <article class="card">
-                                <img src="https://i.postimg.cc/1329DC1M/kit-esencial.webp" loading="lazy" alt="kit esencial de DnD">
+                                <img src="https://i.postimg.cc/1329DC1M/kit-esencial.webp" loading="lazy" width="300" height="200" alt="kit esencial de DnD">
                                 <div class="card-content">
                                     <p class="name">Kit Esencial</p>
                                     <a href="#"><img class="arrow-go" loading="lazy" src="./assets/img/right-arrow.svg"
@@ -225,6 +227,7 @@
                         <div class="swiper-slide">
                             <article class="card">
                                 <img src="https://i.postimg.cc/dtn3Zj0S/set-de-regalo-de-los-reglamentos-b-sicos.webp"
+                                    width="300" height="200"
                                     loading="lazy" alt="set de regalo de los reglamentos básicos de DnD">
                                 <div class="card-content">
                                     <p class="name">Set de regalo</p>
@@ -276,8 +279,8 @@
         </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/header.min.js"></script>
-    <script src="./js/home.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/home.js"></script>
     <script src="./js/swipper.js"></script>
 </body>
 
